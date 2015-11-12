@@ -8,15 +8,118 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "FBConfig.h"
+#import "FBMainViewController.h"
+#import "FBCategoryViewController.h"
+#import "FBFindViewController.h"
+#import "FBTrialViewController.h"
+#import "FBAccountViewController.h"
+
+@interface AppDelegate () {
+    UINavigationController *_mainNC;
+    UINavigationController *_categoryNC;
+    UINavigationController *_findNC;
+    UINavigationController *_trialNC;
+    UINavigationController *_accountNC;
+}
+
+@property (nonatomic, strong) FBMainViewController *mainViewController;
+@property (nonatomic, strong) FBCategoryViewController *categoryViewController;
+@property (nonatomic, strong) FBFindViewController *findViewController;
+@property (nonatomic, strong) FBTrialViewController *trialViewController;
+@property (nonatomic, strong) FBAccountViewController *accountViewController;
 
 @end
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+
+@synthesize mainViewController = _mainViewController, categoryViewController = _categoryViewController, findViewController = _findViewController, trialViewController = _trialViewController, accountViewController = _accountViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:kFontFamily size:12.0f],
+                                                        NSForegroundColorAttributeName : [UIColor colorWithRed:.5 green:.5 blue:.5 alpha:1]
+                                                        } forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:kFontFamily size:12.0f],
+                                                        NSForegroundColorAttributeName : [UIColor blackColor]
+                                                        } forState:UIControlStateSelected];
+    UIColor *mangetaColor = [UIColor colorWithRed:255/255.0 green:51/255.0 blue:102/255.0 alpha:1];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:mangetaColor, NSForegroundColorAttributeName, [UIFont fontWithName:kFontFamily size:18.0f], NSFontAttributeName, nil];
+    
+    
+    // 添加导航栏
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    tabBar.tabBar.translucent = false;
+    self.window.rootViewController = tabBar;
+    
+    // 生成RootViewController
+    _mainViewController     = [[FBMainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    _categoryViewController = [[FBCategoryViewController alloc] init];
+    _findViewController     = [[FBFindViewController alloc] init];
+    _trialViewController    = [[FBTrialViewController alloc] init];
+    _accountViewController  = [[FBAccountViewController alloc] init];
+    
+    // ----------------------------创建Tab导航栏--------------------------------
+    // 精选集
+    _mainNC = [[UINavigationController alloc] initWithRootViewController:_mainViewController];
+    _mainNC.delegate = self;
+    _mainNC.tabBarItem.title = @"精选";
+    _mainNC.tabBarItem.image = [[UIImage imageNamed:@"icon_home_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _mainNC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_home_hover"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [_mainNC.navigationBar setTitleTextAttributes:attributes];
+    
+    [tabBar addChildViewController:_mainNC];
+    
+    // 品类
+    _categoryNC = [[UINavigationController alloc] initWithRootViewController:_categoryViewController];
+    _categoryNC.delegate = self;
+    _categoryNC.tabBarItem.title = @"好货";
+    _categoryNC.tabBarItem.image = [[UIImage imageNamed:@"icon_shopping_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _categoryNC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_shopping_hover"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [_categoryNC.navigationBar setTitleTextAttributes:attributes];
+    
+    [tabBar addChildViewController:_categoryNC];
+    
+    
+    // 发现
+    _findNC = [[UINavigationController alloc] initWithRootViewController:_findViewController];
+    _findNC.delegate = self;
+    _findNC.tabBarItem.title = @"发现";
+    _findNC.tabBarItem.image = [[UIImage imageNamed:@"icon_cart_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _findNC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_cart_hover"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [_findNC.navigationBar setTitleTextAttributes:attributes];
+    
+    [tabBar addChildViewController:_findNC];
+    
+    // 试用
+    _trialNC = [[UINavigationController alloc] initWithRootViewController:_trialViewController];
+    _trialNC.delegate = self;
+    _trialNC.tabBarItem.title = @"试用";
+    _trialNC.tabBarItem.image = [[UIImage imageNamed:@"icon_cart_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _trialNC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_cart_hover"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [_trialNC.navigationBar setTitleTextAttributes:attributes];
+    
+    [tabBar addChildViewController:_trialNC];
+    
+    // 我的账户
+    _accountNC = [[UINavigationController alloc] initWithRootViewController:_accountViewController];
+    _accountNC.delegate = self;
+    _accountNC.tabBarItem.title = @"我的";
+    _accountNC.tabBarItem.image = [[UIImage imageNamed:@"icon_users_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _accountNC.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_users_hover"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [_accountNC.navigationBar setTitleTextAttributes:attributes];
+    
+    [tabBar addChildViewController:_accountNC];
+    
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A5F624FE5EE0F51F080066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CE739E3CB4C3A92359F467 /* libPods.a */; };
 		80B86E111BF42E6D006D3A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E101BF42E6D006D3A0B /* main.m */; };
 		80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E131BF42E6D006D3A0B /* AppDelegate.m */; };
 		80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E161BF42E6D006D3A0B /* ViewController.m */; };
@@ -14,9 +15,28 @@
 		80B86E1D1BF42E6D006D3A0B /* parrot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E1B1BF42E6D006D3A0B /* parrot.xcdatamodeld */; };
 		80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B86E1E1BF42E6D006D3A0B /* Assets.xcassets */; };
 		80B86E221BF42E6D006D3A0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B86E201BF42E6D006D3A0B /* LaunchScreen.storyboard */; };
+		80B86E301BF43323006D3A0B /* FBHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E2F1BF43323006D3A0B /* FBHttpRequest.m */; };
+		80B86E341BF4346A006D3A0B /* FBAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E331BF4346A006D3A0B /* FBAdModel.m */; };
+		80B86E371BF434BA006D3A0B /* FBCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E361BF434BA006D3A0B /* FBCategoryModel.m */; };
+		80B86E3A1BF434DF006D3A0B /* FBUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E391BF434DF006D3A0B /* FBUserModel.m */; };
+		80B86E3D1BF43550006D3A0B /* FBCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E3C1BF43550006D3A0B /* FBCategoryCell.m */; };
+		80B86E3F1BF435C5006D3A0B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */; };
+		80B86E451BF436C1006D3A0B /* FBSlides.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E441BF436C1006D3A0B /* FBSlides.m */; };
+		80B86E481BF437C3006D3A0B /* FBUserManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E471BF437C3006D3A0B /* FBUserManger.m */; };
+		80B86E4B1BF438EE006D3A0B /* NSDictionary+ModelParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E4A1BF438EE006D3A0B /* NSDictionary+ModelParse.m */; };
+		80B86E4E1BF4392A006D3A0B /* NSString+FBMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E4D1BF4392A006D3A0B /* NSString+FBMD5.m */; };
+		80B86E511BF43962006D3A0B /* NSMutableDictionary+AddSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E501BF43962006D3A0B /* NSMutableDictionary+AddSign.m */; };
+		80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B86E521BF43A21006D3A0B /* MainViewController.xib */; };
+		80B86E591BF43ADD006D3A0B /* FBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E581BF43ADD006D3A0B /* FBAccountViewController.m */; };
+		80B86E5C1BF43AFA006D3A0B /* FBFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E5B1BF43AFA006D3A0B /* FBFindViewController.m */; };
+		80B86E5F1BF43B20006D3A0B /* FBCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E5E1BF43B20006D3A0B /* FBCategoryViewController.m */; };
+		80B86E621BF43B61006D3A0B /* FBTrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E611BF43B61006D3A0B /* FBTrialViewController.m */; };
+		80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E641BF43BD6006D3A0B /* FBMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08CE739E3CB4C3A92359F467 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		455767CE134872D5F82B50C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		80B86E0C1BF42E6D006D3A0B /* parrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B86E101BF42E6D006D3A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80B86E121BF42E6D006D3A0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +48,40 @@
 		80B86E1E1BF42E6D006D3A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80B86E211BF42E6D006D3A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80B86E231BF42E6D006D3A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B86E2E1BF43323006D3A0B /* FBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHttpRequest.h; sourceTree = "<group>"; };
+		80B86E2F1BF43323006D3A0B /* FBHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHttpRequest.m; sourceTree = "<group>"; };
+		80B86E311BF433FD006D3A0B /* FBConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBConfig.h; sourceTree = "<group>"; };
+		80B86E321BF4346A006D3A0B /* FBAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAdModel.h; sourceTree = "<group>"; };
+		80B86E331BF4346A006D3A0B /* FBAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAdModel.m; sourceTree = "<group>"; };
+		80B86E351BF434BA006D3A0B /* FBCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCategoryModel.h; sourceTree = "<group>"; };
+		80B86E361BF434BA006D3A0B /* FBCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCategoryModel.m; sourceTree = "<group>"; };
+		80B86E381BF434DF006D3A0B /* FBUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUserModel.h; sourceTree = "<group>"; };
+		80B86E391BF434DF006D3A0B /* FBUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUserModel.m; sourceTree = "<group>"; };
+		80B86E3B1BF43550006D3A0B /* FBCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCategoryCell.h; sourceTree = "<group>"; };
+		80B86E3C1BF43550006D3A0B /* FBCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCategoryCell.m; sourceTree = "<group>"; };
+		80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		80B86E431BF436C1006D3A0B /* FBSlides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSlides.h; sourceTree = "<group>"; };
+		80B86E441BF436C1006D3A0B /* FBSlides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSlides.m; sourceTree = "<group>"; };
+		80B86E461BF437C3006D3A0B /* FBUserManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUserManger.h; sourceTree = "<group>"; };
+		80B86E471BF437C3006D3A0B /* FBUserManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUserManger.m; sourceTree = "<group>"; };
+		80B86E491BF438EE006D3A0B /* NSDictionary+ModelParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ModelParse.h"; sourceTree = "<group>"; };
+		80B86E4A1BF438EE006D3A0B /* NSDictionary+ModelParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ModelParse.m"; sourceTree = "<group>"; };
+		80B86E4C1BF4392A006D3A0B /* NSString+FBMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FBMD5.h"; sourceTree = "<group>"; };
+		80B86E4D1BF4392A006D3A0B /* NSString+FBMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FBMD5.m"; sourceTree = "<group>"; };
+		80B86E4F1BF43962006D3A0B /* NSMutableDictionary+AddSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+AddSign.h"; sourceTree = "<group>"; };
+		80B86E501BF43962006D3A0B /* NSMutableDictionary+AddSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+AddSign.m"; sourceTree = "<group>"; };
+		80B86E521BF43A21006D3A0B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		80B86E571BF43ADD006D3A0B /* FBAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAccountViewController.h; sourceTree = "<group>"; };
+		80B86E581BF43ADD006D3A0B /* FBAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAccountViewController.m; sourceTree = "<group>"; };
+		80B86E5A1BF43AFA006D3A0B /* FBFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFindViewController.h; sourceTree = "<group>"; };
+		80B86E5B1BF43AFA006D3A0B /* FBFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFindViewController.m; sourceTree = "<group>"; };
+		80B86E5D1BF43B20006D3A0B /* FBCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCategoryViewController.h; sourceTree = "<group>"; };
+		80B86E5E1BF43B20006D3A0B /* FBCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCategoryViewController.m; sourceTree = "<group>"; };
+		80B86E601BF43B61006D3A0B /* FBTrialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTrialViewController.h; sourceTree = "<group>"; };
+		80B86E611BF43B61006D3A0B /* FBTrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTrialViewController.m; sourceTree = "<group>"; };
+		80B86E631BF43BD6006D3A0B /* FBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBMainViewController.h; sourceTree = "<group>"; };
+		80B86E641BF43BD6006D3A0B /* FBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMainViewController.m; sourceTree = "<group>"; };
+		CE1142730BC66BE730729B30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A5F624FE5EE0F51F080066 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +101,8 @@
 			children = (
 				80B86E0E1BF42E6D006D3A0B /* parrot */,
 				80B86E0D1BF42E6D006D3A0B /* Products */,
+				B2DFE02F5AE81DECB6975A72 /* Pods */,
+				B379020E94BD65702BBF361D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +117,11 @@
 		80B86E0E1BF42E6D006D3A0B /* parrot */ = {
 			isa = PBXGroup;
 			children = (
+				80B86E2D1BF432E8006D3A0B /* Classes */,
+				80B86E2C1BF432DE006D3A0B /* Resources */,
+				80B86E2B1BF432D1006D3A0B /* Helper */,
+				80B86E2A1BF432AF006D3A0B /* Controller */,
+				80B86E291BF43287006D3A0B /* Model */,
 				80B86E121BF42E6D006D3A0B /* AppDelegate.h */,
 				80B86E131BF42E6D006D3A0B /* AppDelegate.m */,
 				80B86E151BF42E6D006D3A0B /* ViewController.h */,
@@ -82,6 +144,91 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		80B86E291BF43287006D3A0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80B86E321BF4346A006D3A0B /* FBAdModel.h */,
+				80B86E331BF4346A006D3A0B /* FBAdModel.m */,
+				80B86E351BF434BA006D3A0B /* FBCategoryModel.h */,
+				80B86E361BF434BA006D3A0B /* FBCategoryModel.m */,
+				80B86E381BF434DF006D3A0B /* FBUserModel.h */,
+				80B86E391BF434DF006D3A0B /* FBUserModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		80B86E2A1BF432AF006D3A0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				80B86E571BF43ADD006D3A0B /* FBAccountViewController.h */,
+				80B86E581BF43ADD006D3A0B /* FBAccountViewController.m */,
+				80B86E5A1BF43AFA006D3A0B /* FBFindViewController.h */,
+				80B86E5B1BF43AFA006D3A0B /* FBFindViewController.m */,
+				80B86E5D1BF43B20006D3A0B /* FBCategoryViewController.h */,
+				80B86E5E1BF43B20006D3A0B /* FBCategoryViewController.m */,
+				80B86E601BF43B61006D3A0B /* FBTrialViewController.h */,
+				80B86E611BF43B61006D3A0B /* FBTrialViewController.m */,
+				80B86E631BF43BD6006D3A0B /* FBMainViewController.h */,
+				80B86E641BF43BD6006D3A0B /* FBMainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		80B86E2B1BF432D1006D3A0B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				80B86E491BF438EE006D3A0B /* NSDictionary+ModelParse.h */,
+				80B86E4A1BF438EE006D3A0B /* NSDictionary+ModelParse.m */,
+				80B86E4C1BF4392A006D3A0B /* NSString+FBMD5.h */,
+				80B86E4D1BF4392A006D3A0B /* NSString+FBMD5.m */,
+				80B86E4F1BF43962006D3A0B /* NSMutableDictionary+AddSign.h */,
+				80B86E501BF43962006D3A0B /* NSMutableDictionary+AddSign.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		80B86E2C1BF432DE006D3A0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */,
+				80B86E521BF43A21006D3A0B /* MainViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		80B86E2D1BF432E8006D3A0B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				80B86E2E1BF43323006D3A0B /* FBHttpRequest.h */,
+				80B86E2F1BF43323006D3A0B /* FBHttpRequest.m */,
+				80B86E311BF433FD006D3A0B /* FBConfig.h */,
+				80B86E3B1BF43550006D3A0B /* FBCategoryCell.h */,
+				80B86E3C1BF43550006D3A0B /* FBCategoryCell.m */,
+				80B86E431BF436C1006D3A0B /* FBSlides.h */,
+				80B86E441BF436C1006D3A0B /* FBSlides.m */,
+				80B86E461BF437C3006D3A0B /* FBUserManger.h */,
+				80B86E471BF437C3006D3A0B /* FBUserManger.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B2DFE02F5AE81DECB6975A72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE1142730BC66BE730729B30 /* Pods.debug.xcconfig */,
+				455767CE134872D5F82B50C5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B379020E94BD65702BBF361D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08CE739E3CB4C3A92359F467 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80B86E261BF42E6D006D3A0B /* Build configuration list for PBXNativeTarget "parrot" */;
 			buildPhases = (
+				D587FF6624806B9C9DBE7872 /* Check Pods Manifest.lock */,
 				80B86E081BF42E6D006D3A0B /* Sources */,
 				80B86E091BF42E6D006D3A0B /* Frameworks */,
 				80B86E0A1BF42E6D006D3A0B /* Resources */,
+				693E5601E55DD555366EA52D /* Embed Pods Frameworks */,
+				6B174AE09C1154A8984A23DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,21 +291,86 @@
 			files = (
 				80B86E221BF42E6D006D3A0B /* LaunchScreen.storyboard in Resources */,
 				80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */,
+				80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */,
 				80B86E1A1BF42E6D006D3A0B /* Main.storyboard in Resources */,
+				80B86E3F1BF435C5006D3A0B /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		693E5601E55DD555366EA52D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B174AE09C1154A8984A23DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D587FF6624806B9C9DBE7872 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80B86E081BF42E6D006D3A0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B86E3A1BF434DF006D3A0B /* FBUserModel.m in Sources */,
+				80B86E301BF43323006D3A0B /* FBHttpRequest.m in Sources */,
+				80B86E621BF43B61006D3A0B /* FBTrialViewController.m in Sources */,
+				80B86E3D1BF43550006D3A0B /* FBCategoryCell.m in Sources */,
 				80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */,
 				80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */,
+				80B86E451BF436C1006D3A0B /* FBSlides.m in Sources */,
+				80B86E4E1BF4392A006D3A0B /* NSString+FBMD5.m in Sources */,
+				80B86E371BF434BA006D3A0B /* FBCategoryModel.m in Sources */,
+				80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */,
+				80B86E5F1BF43B20006D3A0B /* FBCategoryViewController.m in Sources */,
+				80B86E591BF43ADD006D3A0B /* FBAccountViewController.m in Sources */,
 				80B86E111BF42E6D006D3A0B /* main.m in Sources */,
+				80B86E341BF4346A006D3A0B /* FBAdModel.m in Sources */,
+				80B86E481BF437C3006D3A0B /* FBUserManger.m in Sources */,
+				80B86E4B1BF438EE006D3A0B /* NSDictionary+ModelParse.m in Sources */,
+				80B86E511BF43962006D3A0B /* NSMutableDictionary+AddSign.m in Sources */,
 				80B86E1D1BF42E6D006D3A0B /* parrot.xcdatamodeld in Sources */,
+				80B86E5C1BF43AFA006D3A0B /* FBFindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +478,7 @@
 		};
 		80B86E271BF42E6D006D3A0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE1142730BC66BE730729B30 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = parrot/Info.plist;
@@ -274,6 +490,7 @@
 		};
 		80B86E281BF42E6D006D3A0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455767CE134872D5F82B50C5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = parrot/Info.plist;
@@ -302,6 +519,7 @@
 				80B86E281BF42E6D006D3A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
