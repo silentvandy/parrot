@@ -26,25 +26,81 @@
             
         } else {
             // 初始化未登录默认值
-            [self resetValue];
+            
         }
     }
     return self;
 }
 
-// 初始化默认值
-- (void)resetValue {
-    _userId = nil;
+// 是否登录状态
++ (BOOL)isLogin {
+    NSUserDefaults *passportDefaults = [NSUserDefaults standardUserDefaults];
+    return [passportDefaults boolForKey:@"FB_USER_LOGIN"];
 }
 
-// 获取用户登录状态
-- (BOOL)loginState {
-    if (!self.userId || [self.userId isEqualToString:@""]) {
-        return NO;
-    }
+// 更新登录状态
++ (void)setLoginStatus:(BOOL)status {
+    NSUserDefaults *passportDefaults = [NSUserDefaults standardUserDefaults];
+    [passportDefaults setBool:status forKey:@"FB_USER_LOGIN"];
     
-    return YES;
+    [passportDefaults synchronize];
 }
+
++ (void)logout {
+    [self setLoginStatus:NO];
+    
+    // 清空用户信息
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"FB_SESSION_ID"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (void)addSessionId:(NSInteger)userId {
+    NSUserDefaults *passportDefaults = [NSUserDefaults standardUserDefaults];
+    [passportDefaults setInteger:userId forKey:@"FB_SESSION_ID"];
+    [passportDefaults synchronize];
+    
+    // 同步设置登录状态
+    [self setLoginStatus:YES];
+}
+
++ (NSInteger)getSessionId {
+    NSUserDefaults *passportDefaults = [NSUserDefaults standardUserDefaults];
+    return [passportDefaults integerForKey:@"FB_SESSION_ID"];
+}
+
+// 添加最新订单ID
++ (void)setLastOrderId:(NSString *)orderId {
+    NSUserDefaults *passportDefaults = [NSUserDefaults standardUserDefaults];
+    [passportDefaults setObject:orderId forKey:@"FB_LAST_ORDERID"];
+    [passportDefaults synchronize];
+}
+
+// 获取最新订单ID
++ (NSString *)getLastOrderId {
+     NSUserDefaults *passportDefaults = [NSUserDefaults standardUserDefaults];
+    return [passportDefaults objectForKey:@"FB_LAST_ORDERID"];
+}
+
+// 更新用户信息
+- (void)updateUserInfo:(NSDictionary *)user {
+    
+}
+
+// 获取用户信息
+- (FBUserModel *)findUserInfo:(NSInteger)userId {
+    FBUserModel *currentUser;
+    
+    return currentUser;
+}
+
+// 获取最新用户
+- (FBUserModel *)findLastUser {
+    FBUserModel *currentUser;
+    
+    return currentUser;
+}
+
+
 
 // 获取UUID
 - (NSString *)uuid {
@@ -53,7 +109,7 @@
         return uuid;
     }
     // 创建新UUID
-    NSString *new_uuid = [self gen_uuid];
+    NSString *new_uuid = [self genUid];
     [self saveUUIDToLocal:new_uuid];
     
     return new_uuid;
@@ -69,7 +125,7 @@
 }
 
 // 创建uuid
-- (NSString *)gen_uuid {
+- (NSString *)genUid {
     CFUUIDRef puuid = CFUUIDCreate(nil);
     CFStringRef uuidStr = CFUUIDCreateString(nil, puuid);
     NSString *result = (NSString *)CFBridgingRelease(CFStringCreateCopy(NULL, uuidStr));
@@ -105,66 +161,6 @@
     return kClientSecret;
 }
 
-+ (NSString *)standardDate {
-    return @"";
-}
-
-- (NSString *)gender {
-    if (self.userInfo.gender == 1) {
-        return @"男";
-    } else if (self.userInfo.gender == 2) {
-        return @"女";
-    } else {
-        return @"保密";
-    }
-}
-
-- (void)login {
-    
-}
-
-- (void)loginWithAnimation:(BOOL)animation {
-    
-}
-
-// 安全退出
-- (void)logout {
-    [self removeUserInfo];
-    [self resetValue];
-}
-
-// 登录成功
-- (void)loginSuccess {
-    [self storeUserInfo];
-}
-
-#pragma mark - 本地化信息
-- (void)storeUserInfo {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                              self.userId, @"userId", nil];
-    NSString *storeData = [userInfo JSONString];
-    [[NSUserDefaults standardUserDefaults] setObject:storeData forKey:kUserInfoPath];
-    BOOL status = [[NSUserDefaults standardUserDefaults] synchronize];
-    if (status == YES) {
-        NSLog(@"Store user info success!");
-    } else {
-        NSLog(@"Store user info fail!!!");
-    }
-}
-
-- (void)removeUserInfo {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserInfoPath];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-// 刷新用户信息
-- (void)refreshUserInfo {
-    
-}
-
-- (void)backToGame {
-    
-}
 
 - (void)modifyLocalAvatar:(NSString *)avatar {
     

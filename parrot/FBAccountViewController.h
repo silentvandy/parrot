@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FBAccountViewController : UIViewController
+@interface FBAccountViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 @end

@@ -11,15 +11,31 @@
 @class FBUserModel;
 
 @interface FBUserManger : NSObject {
-    BOOL         *_loginState;
-    NSString     *_userId;
+    BOOL         *_isLogin;
 }
 
-// 是否登录标识
-@property (nonatomic, assign, readonly) BOOL   loginState;
+@property (nonatomic,strong) NSString *accountField;
 
-@property (nonatomic, copy) NSString  *userId;
-@property (nonatomic, assign, readonly) FBUserModel  *userInfo;
+// 设置登录状态
++ (BOOL)isLogin;
++ (void)setLoginStatus:(BOOL)status;
+
+// 设置退出状态
++ (void)logout;
+
+// 获取登录用户ID
++ (void)addSessionId:(NSInteger)userId;
++ (NSInteger)getSessionId;
+
+// 更新用户信息
+- (void)updateUserInfo:(NSDictionary *)user;
+- (FBUserModel *)findUserInfo:(NSInteger)userId;
+- (FBUserModel *)findLastUser;
+
+// 最新订单Id
++ (void)setLastOrderId:(NSString *)orderId;
++ (NSString *)getLastOrderId;
+
 
 - (NSString *)uuid;
 + (NSString *)time;
@@ -27,21 +43,6 @@
 + (NSString *)clientId;
 + (NSString *)clientSecret;
 
-+ (NSString *)standardDate;
-
-- (NSString *)gender;
-
-- (void)login;
-- (void)loginWithAnimation:(BOOL)animation;
-
-- (void)logout;
-- (void)storeUserInfo;
-
-- (void)backToGame;
-
 - (void)modifyLocalAvatar:(NSString *)avatar;
-
-- (void)loginSuccess;
-- (void)refreshUserInfo;
 
 @end
