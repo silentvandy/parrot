@@ -35,14 +35,84 @@
     [_httpReqeust startAsynchronous];
 }
 
+// 提交数据
 - (void)postInfoWithParams:(NSDictionary *)params andUrl:(NSString *)urlString {
-    
+    self.requestUrl = [NSString stringWithFormat:@"%@%@", kBaseUrl, urlString];
+    NSString *serUrl = self.requestUrl;
+    NSURL *url = [NSURL URLWithString:serUrl];
+    if (_formDataReqeust) {
+        [_formDataReqeust clearDelegatesAndCancel];
+        _formDataReqeust = nil;
+    }
+    _formDataReqeust = [[ASIFormDataRequest alloc] initWithURL:url];
+    NSArray *paramKeys = [params allKeys];
+    for (NSString *key in paramKeys) {
+        NSString *value = [params objectForKey:key];
+        [_formDataReqeust setPostValue:value forKey:key];
+    }
+    [_formDataReqeust setDelegate:self];
+    [_formDataReqeust startAsynchronous];
 }
 
+// 上传文件
 - (void)postFileWithParams:(NSDictionary *)params andUrl:(NSString *)urlString {
-    
+    self.requestUrl = [NSString stringWithFormat:@"%@%@", kBaseUrl, urlString];
+    NSString *serUrl = self.requestUrl;
+    NSURL *url = [NSURL URLWithString:serUrl];
+    if (_formDataReqeust) {
+        [_formDataReqeust clearDelegatesAndCancel];
+        _formDataReqeust = nil;
+    }
+    _formDataReqeust = [[ASIFormDataRequest alloc] initWithURL:url];
+    NSArray *paramKeys = [params allKeys];
+    for (NSString *key in paramKeys) {
+        // todo: 对上传文件验证处理
+        if (![key isEqualToString:@"pic"]) {
+            NSString *value = [params objectForKey:key];
+            [_formDataReqeust setPostValue:value forKey:key];
+        } else {
+            UIImage *img = [params objectForKey:key];
+            [_formDataReqeust setData:UIImageJPEGRepresentation(img, .6) withFileName:@"head.jpg" andContentType:@"image/jpeg" forKey:key];
+        }
+    }
+    _formDataReqeust.shouldAttemptPersistentConnection = NO;
+    [_formDataReqeust setDelegate:self];
+    [_formDataReqeust startAsynchronous];
 }
 
+// 从返回的URL中读取参数
++ (NSString *)getParamValueFromUrl:(NSString *)url paramName:(NSString *)paramName {
+    if (![paramName hasSuffix:@"="]) {
+        paramName = [NSString stringWithFormat:@"%@=", paramName];
+    }
+    
+    NSString *str = nil;
+    NSRange start = [url rangeOfString:paramName];
+    if (start.location != NSNotFound) {
+        // confirm that the parameter is not a partial name match
+        unichar c = '?';
+        if (start.location != 0) {
+            c = [url characterAtIndex:start.location - 1];
+        }
+        if (c == '?' || c == '&' || c == '#') {
+            NSRange end = [[url substringFromIndex:start.location + start.length] rangeOfString:@"&"];
+            NSUInteger offset = start.location + start.length;
+            str = end.location == NSNotFound ? [url substringFromIndex:offset] : [url substringWithRange:NSMakeRange(offset, end.location)];
+            str = [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        }
+    }
+    
+    return str;
+}
+
+// 判断网络是否通畅
+- (BOOL)isNetReachability {
+    Reachability *conn = [Reachability reachabilityForInternetConnection];
+    if (conn.currentReachabilityStatus == NotReachable) {
+        return NO;
+    }
+    return YES;
+}
 
 + (NSString *)serializeURL:(NSString *)baseUrl params:(NSDictionary *)params httpMethod:(NSString *)httpMethod {
     

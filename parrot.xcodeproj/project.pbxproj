@@ -32,6 +32,10 @@
 		80B86E5F1BF43B20006D3A0B /* FBCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E5E1BF43B20006D3A0B /* FBCategoryViewController.m */; };
 		80B86E621BF43B61006D3A0B /* FBTrialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E611BF43B61006D3A0B /* FBTrialViewController.m */; };
 		80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E641BF43BD6006D3A0B /* FBMainViewController.m */; };
+		80B86E681BF44FBA006D3A0B /* FBAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E671BF44FBA006D3A0B /* FBAddressModel.m */; };
+		80B86E6B1BF44FFB006D3A0B /* FBOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E6A1BF44FFB006D3A0B /* FBOrderModel.m */; };
+		80B86E6E1BF49085006D3A0B /* FBSkuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E6D1BF49085006D3A0B /* FBSkuModel.m */; };
+		80B86E711BF49121006D3A0B /* FBProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E701BF49121006D3A0B /* FBProductModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +85,14 @@
 		80B86E611BF43B61006D3A0B /* FBTrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTrialViewController.m; sourceTree = "<group>"; };
 		80B86E631BF43BD6006D3A0B /* FBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBMainViewController.h; sourceTree = "<group>"; };
 		80B86E641BF43BD6006D3A0B /* FBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMainViewController.m; sourceTree = "<group>"; };
+		80B86E661BF44FBA006D3A0B /* FBAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAddressModel.h; sourceTree = "<group>"; };
+		80B86E671BF44FBA006D3A0B /* FBAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAddressModel.m; sourceTree = "<group>"; };
+		80B86E691BF44FFB006D3A0B /* FBOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOrderModel.h; sourceTree = "<group>"; };
+		80B86E6A1BF44FFB006D3A0B /* FBOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOrderModel.m; sourceTree = "<group>"; };
+		80B86E6C1BF49085006D3A0B /* FBSkuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSkuModel.h; sourceTree = "<group>"; };
+		80B86E6D1BF49085006D3A0B /* FBSkuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSkuModel.m; sourceTree = "<group>"; };
+		80B86E6F1BF49121006D3A0B /* FBProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProductModel.h; sourceTree = "<group>"; };
+		80B86E701BF49121006D3A0B /* FBProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProductModel.m; sourceTree = "<group>"; };
 		CE1142730BC66BE730729B30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +165,14 @@
 				80B86E361BF434BA006D3A0B /* FBCategoryModel.m */,
 				80B86E381BF434DF006D3A0B /* FBUserModel.h */,
 				80B86E391BF434DF006D3A0B /* FBUserModel.m */,
+				80B86E661BF44FBA006D3A0B /* FBAddressModel.h */,
+				80B86E671BF44FBA006D3A0B /* FBAddressModel.m */,
+				80B86E691BF44FFB006D3A0B /* FBOrderModel.h */,
+				80B86E6A1BF44FFB006D3A0B /* FBOrderModel.m */,
+				80B86E6C1BF49085006D3A0B /* FBSkuModel.h */,
+				80B86E6D1BF49085006D3A0B /* FBSkuModel.m */,
+				80B86E6F1BF49121006D3A0B /* FBProductModel.h */,
+				80B86E701BF49121006D3A0B /* FBProductModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -358,7 +378,10 @@
 				80B86E3D1BF43550006D3A0B /* FBCategoryCell.m in Sources */,
 				80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */,
 				80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */,
+				80B86E681BF44FBA006D3A0B /* FBAddressModel.m in Sources */,
+				80B86E6E1BF49085006D3A0B /* FBSkuModel.m in Sources */,
 				80B86E451BF436C1006D3A0B /* FBSlides.m in Sources */,
+				80B86E711BF49121006D3A0B /* FBProductModel.m in Sources */,
 				80B86E4E1BF4392A006D3A0B /* NSString+FBMD5.m in Sources */,
 				80B86E371BF434BA006D3A0B /* FBCategoryModel.m in Sources */,
 				80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */,
@@ -370,6 +393,7 @@
 				80B86E4B1BF438EE006D3A0B /* NSDictionary+ModelParse.m in Sources */,
 				80B86E511BF43962006D3A0B /* NSMutableDictionary+AddSign.m in Sources */,
 				80B86E1D1BF42E6D006D3A0B /* parrot.xcdatamodeld in Sources */,
+				80B86E6B1BF44FFB006D3A0B /* FBOrderModel.m in Sources */,
 				80B86E5C1BF43AFA006D3A0B /* FBFindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

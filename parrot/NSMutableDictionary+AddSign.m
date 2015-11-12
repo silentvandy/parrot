@@ -9,6 +9,7 @@
 #import "NSMutableDictionary+AddSign.h"
 
 #import "NSString+FBMD5.h"
+#import "FBUserManger.h"
 
 @implementation NSMutableDictionary (AddSign)
 
@@ -54,8 +55,8 @@
         i++;
     }
     
-    //[paraStr appendString:[THNUserManager client_secret]];
-    //[paraStr appendString:[THNUserManager client_id]];
+    [paraStr appendString:[FBUserManger clientSecret]];
+    [paraStr appendString:[FBUserManger clientId]];
     
     // 两次MD5
     NSString *signStrTmp = [paraStr FBMD5Hash32];
