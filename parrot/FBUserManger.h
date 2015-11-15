@@ -36,13 +36,6 @@
 + (void)setLastOrderId:(NSString *)orderId;
 + (NSString *)getLastOrderId;
 
-
-- (NSString *)uuid;
-+ (NSString *)time;
-+ (NSString *)channel;
-+ (NSString *)clientId;
-+ (NSString *)clientSecret;
-
 - (void)modifyLocalAvatar:(NSString *)avatar;
 
 @end

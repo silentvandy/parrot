@@ -25,4 +25,6 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) FBAdType adType;
 
+- (NSMutableArray *)asignModelWithObject:(id)resultObject;
+
 @end

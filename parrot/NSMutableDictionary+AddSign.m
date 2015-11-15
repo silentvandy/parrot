@@ -54,9 +54,9 @@
         }
         i++;
     }
-    
-    [paraStr appendString:[FBUserManger clientSecret]];
-    [paraStr appendString:[FBUserManger clientId]];
+//    
+//    [paraStr appendString:[FBUserManger clientSecret]];
+//    [paraStr appendString:[FBUserManger clientId]];
     
     // 两次MD5
     NSString *signStrTmp = [paraStr FBMD5Hash32];

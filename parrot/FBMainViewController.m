@@ -8,17 +8,16 @@
 
 #import "FBMainViewController.h"
 
-#import "FBConfig.h"
-#import "FBHttpRequest.h"
 #import "UIImageView+WebCache.h"
 #import "NSDictionary+ModelParse.h"
 
+#import "FBConfig.h"
+#import "FBAPI.h"
 #import "FBAdModel.h"
 
-@interface FBMainViewController () <FBHttpRequestDelegate> {
-    FBHttpRequest *_adsRequest;
-    FBHttpRequest *_contentRequest;
-    
+#define AD_DATA    @"AD_DATA"
+
+@interface FBMainViewController () <FBRequestDelegate> {
     BOOL _afterRequest;
     BOOL _nibsRegistered;
     
@@ -26,6 +25,7 @@
     NSInteger _totalPage;
 }
 
+@property (strong, nonatomic) FBAPI *adsRequest;
 @property (strong, nonatomic) NSMutableArray *adsItems;
 @property (strong, nonatomic) NSMutableArray *contentData;
 
@@ -36,13 +36,10 @@
 @implementation FBMainViewController
 
 @synthesize tableView = _tableView;
-@synthesize adsItems = _adsItems, contentData = _contentData;
+@synthesize adsItems = _adsItems, contentData = _contentData, adsRequest = _adsRequest;
 
 - (id)init {
     if (self = [super init]) {
-        _adsRequest = [[FBHttpRequest alloc] init];
-        _contentRequest = [[FBHttpRequest alloc] init];
-        
         _adsItems = [[NSMutableArray alloc] init];
         _contentData = [[NSMutableArray alloc] init];
         
@@ -72,59 +69,39 @@
     [self.adsItems removeAllObjects];
     self.adsItems = [[NSMutableArray alloc] initWithCapacity:0];
     
+    NSLog(@"request ad data!");
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                    @"app_index_slide", @"name",
                                    @"5", @"size", nil];
-    if (!_adsRequest) {
-        _adsRequest = [[FBHttpRequest alloc] init];
+    self.adsRequest = [FBAPI getWithUrlString:kMainSlide requestDictionary:params delegate:self];
+    self.adsRequest.flag = AD_DATA;
+    NSLog(@"request start!");
+    [self.adsRequest startRequest];
+}
+
+#pragma mark - FBRequestDelegate
+
+- (void)requestSucess:(FBRequest *)request result:(id)result {
+    _afterRequest = YES;
+    
+    if ([request.flag isEqualToString:AD_DATA]) {
+        // NSLog(@"data: %@", result[@"data"][@"rows"]);
+        
+        FBAdModel *adv = [[FBAdModel alloc] init];
+        [_adsItems addObjectsFromArray:[adv asignModelWithObject:result]];
+        
+        NSLog(@"轮换图 %lu",  (unsigned long)[_adsItems count] );
+        
+        [self.tableView reloadData];
     }
-    [_adsRequest cleanDelegatesAndCancel];
-    _adsRequest.delegate = self;
-    [_adsRequest getInfoWithParams:params andUrl:[NSString stringWithFormat:@"%@", kMainSlide]];
+}
+
+- (void)requestFailed:(FBRequest *)request error:(NSError *)error {
+    NSLog(@"请求出错:  %@", error);
 }
 
 // 获取推荐产品列表
 - (void)requestForContentOfPage:(int)page {
-    
-}
-
-#pragma mark - FBHttpRequestDelegate
-
-- (void)fbRequest:(FBHttpRequest *)fbRequest didFinishLoading:(id)result {
-    
-    _afterRequest = YES;
-    // 判断来源请求
-    if ([fbRequest.requestUrl hasSuffix:kMainSlide]) {
-        if ([result isKindOfClass:[NSDictionary class]]) {
-            NSArray *rows = [result objectForKey:@"rows"];
-            for (NSDictionary *dict in rows) {
-                FBAdModel *adv = [[FBAdModel alloc] init];
-                adv.adID = [dict stringValueForKey:@"_id"];
-                adv.adTitle = [dict stringValueForKey:@"title"];
-                adv.adSubTitle = [dict stringValueForKey:@"subtitle"];
-                adv.adType = [dict intValueForKey:@"type"];
-                if (adv.adType == 2) {
-                    NSString *itemType = [dict stringValueForKey:@"item_type"];
-                    if ([itemType isEqualToString:@"Topic"]) {
-                        adv.adType = kAdTypeTopic;
-                    } else {
-                        adv.adType = kAdTypeProduct;
-                    }
-                }
-                adv.adImage = [dict stringValueForKey:@"cover_url"];
-                
-                [_adsItems addObject:adv];
-            }
-        }
-        
-    }else if ([fbRequest.requestUrl hasPrefix:kProductList]) {
-        
-    }
-    
-    [self.tableView reloadData];
-}
-
-- (void)fbRequest:(id)fbRequest didFailLoading:(NSError *)error {
     
 }
 
@@ -152,7 +129,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     NSLog(@"Ads count: %lu", (unsigned long)[_adsItems count]);
-    FBSlides *slides = [[FBSlides alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kSlideBannerHeight) delegate:self imageItems:[self rebuildSlideItems:_adsItems] isAuto:YES];
+    FBSlides *slides = [[FBSlides alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kSlideBannerHeight) delegate:self imageItems:_adsItems isAuto:YES];
     [slides scrollToIndex:0];
     return slides;
 }
@@ -160,24 +137,6 @@
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //
 //}
-
-// 重新组装数据
-- (NSMutableArray *)rebuildSlideItems:(NSMutableArray *)items {
-    NSMutableArray *rebuildItems = [[NSMutableArray alloc] initWithCapacity:0];
-    
-    NSInteger length = items.count;
-    if ([items count] > 1) {
-        [rebuildItems addObject:[items objectAtIndex:length - 1]];
-    }
-    for (int i = 0; i < length; i++) {
-        [rebuildItems addObject:[items objectAtIndex:i]];
-    }
-    if ([items count] > 1) {
-        [rebuildItems addObject:[items objectAtIndex:0]];
-    }
-    
-    return rebuildItems;
-}
 
 - (void)slide:(FBSlides *)slide currentItem:(int)index {
     NSLog(@"%s \n scrollToIndex ===> %d", __FUNCTION__, index);

@@ -34,7 +34,7 @@ static CGFloat FOCUS_INTERVAL = 5.0;
 - (id)initWithFrame:(CGRect)frame delegate:(id<FBSlidesDelegate>)delegate imageItems:(NSArray *)items isAuto:(BOOL)isAuto {
     self = [super initWithFrame:frame];
     if (self) {
-        _slideItems = items;
+        _slideItems = [self rebuildSlideItems:items];
         _isAutoPlay = isAuto;
         
         _pageCount  = [_slideItems count];
@@ -189,6 +189,26 @@ static CGFloat FOCUS_INTERVAL = 5.0;
         NSLog(@"drag x: %f", targetX);
         [self moveToTargetPosition:targetX];
     }
+}
+
+#pragma mark - Private Methods
+
+// 重新组装数据
+- (NSArray *)rebuildSlideItems:(NSArray *)items {
+    NSMutableArray *rebuildItems = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    NSInteger length = items.count;
+    if ([items count] > 1) {
+        [rebuildItems addObject:[items objectAtIndex:length - 1]];
+    }
+    for (int i = 0; i < length; i++) {
+        [rebuildItems addObject:[items objectAtIndex:i]];
+    }
+    if ([items count] > 1) {
+        [rebuildItems addObject:[items objectAtIndex:0]];
+    }
+    
+    return rebuildItems;
 }
 
 @end

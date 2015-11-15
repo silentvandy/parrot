@@ -10,6 +10,8 @@
 
 #import "FBUserManger.h"
 
+#import "FBLoginViewController.h"
+
 @interface FBAccountViewController () {
     NSArray *_menuAry;
 }
@@ -83,7 +85,7 @@
         }
         
         // 客服热线无需指示
-        if (indexPath.row == [self.menuAry count] - 1) {
+        if ((indexPath.row == [self.menuAry count] - 1) || (indexPath.row == 0)) {
             cell.accessoryType  = UITableViewCellAccessoryNone;
         } else {
             cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
@@ -98,7 +100,12 @@
             
         } else { // 未登录状态显示默认值
             [((UIImageView *)[cell viewWithTag:1101]) setImage:[UIImage imageNamed:@"placeholder"]];
-            [((UILabel *)[cell viewWithTag:1102]) setText:@"未登录"];
+            [((UILabel *)[cell viewWithTag:1102]) setText:@"点击登录"];
+            
+            // 添加点击登录事件
+            UITapGestureRecognizer *tapLogin = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(redirectLogin:)];
+            ((UILabel *)[cell viewWithTag:1102]).userInteractionEnabled = YES;
+            [((UILabel *)[cell viewWithTag:1102]) addGestureRecognizer:tapLogin];
         }
     } else {
         cell.textLabel.text = self.menuAry[indexPath.row];
@@ -158,6 +165,18 @@
         [self.tableView setLayoutMargins:UIEdgeInsetsMake(0, 0, 0, 0)];
     }
 }
+
+// 调整登录
+- (void)redirectLogin:(id)sender {
+    FBLoginViewController *loginViewController = [[FBLoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    loginViewController.title = @"登录";
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    //[self.navigationController pushViewController:nav animated:YES];
+    
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

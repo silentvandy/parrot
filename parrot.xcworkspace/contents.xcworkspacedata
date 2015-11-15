@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:parrot.xcodeproj">
+      location = "group:/Users/xiaoyi/Apps/parrot/parrot.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:parrot.xcodeproj">
    </FileRef>
 </Workspace>

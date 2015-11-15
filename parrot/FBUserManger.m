@@ -8,9 +8,6 @@
 
 #import "FBUserManger.h"
 
-#import <JSONKit/JSONKit.h>
-#import "FBHttpRequest.h"
-
 #import "FBConfig.h"
 #import "FBUserModel.h"
 
@@ -99,68 +96,6 @@
     
     return currentUser;
 }
-
-
-
-// 获取UUID
-- (NSString *)uuid {
-    NSString *uuid = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalKeyUUID];
-    if (uuid) {
-        return uuid;
-    }
-    // 创建新UUID
-    NSString *new_uuid = [self genUid];
-    [self saveUUIDToLocal:new_uuid];
-    
-    return new_uuid;
-}
-
-// 本地化存储
-- (void)saveUUIDToLocal:(NSString *)uuid {
-    NSString *k = [[NSUserDefaults standardUserDefaults] objectForKey:kLocalKeyUUID];
-    if (!k) {
-        [[NSUserDefaults standardUserDefaults] setObject:uuid forKey:kLocalKeyUUID];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-
-// 创建uuid
-- (NSString *)genUid {
-    CFUUIDRef puuid = CFUUIDCreate(nil);
-    CFStringRef uuidStr = CFUUIDCreateString(nil, puuid);
-    NSString *result = (NSString *)CFBridgingRelease(CFStringCreateCopy(NULL, uuidStr));
-    CFRelease(puuid);
-    CFRelease(uuidStr);
-    
-    return result;
-}
-
-
-+ (NSString *)time {
-    NSDate *sendDate = [NSDate date];
-    NSCalendar  *cal = [NSCalendar  currentCalendar];
-    NSUInteger  unitFlags = NSDayCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit;
-    NSDateComponents *conponent = [cal components:unitFlags fromDate:sendDate];
-    NSInteger year = [conponent year];
-    NSInteger month = [conponent month];
-    NSInteger day = [conponent day];
-    NSString *nsDateString = [NSString stringWithFormat:@"%4ld-%2ld-%2ld", (long)year, (long)month, (long)day];
-    
-    return nsDateString;
-}
-
-+ (NSString *)channel {
-    return kChannel;
-}
-
-+ (NSString *)clientId {
-    return kClientID;
-}
-
-+ (NSString *)clientSecret {
-    return kClientSecret;
-}
-
 
 - (void)modifyLocalAvatar:(NSString *)avatar {
     
