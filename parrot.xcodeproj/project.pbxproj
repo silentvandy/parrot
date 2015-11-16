@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		07A5F624FE5EE0F51F080066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CE739E3CB4C3A92359F467 /* libPods.a */; };
 		80A8BB761BF57D830005FC1F /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB751BF57D830005FC1F /* FBLoginViewController.m */; };
-		80A8BB781BF57D9D0005FC1F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB771BF57D9D0005FC1F /* LoginViewController.xib */; };
 		80A8BB7B1BF592AB0005FC1F /* FBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB7A1BF592AB0005FC1F /* FBTextField.m */; };
 		80A8BB7E1BF5C5DF0005FC1F /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB7D1BF5C5DF0005FC1F /* SignupViewController.xib */; };
 		80A8BB841BF859C80005FC1F /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB831BF859C80005FC1F /* FBRequest.m */; };
 		80A8BB871BF8C64A0005FC1F /* FBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB861BF8C64A0005FC1F /* FBAPI.m */; };
+		80A8BB891BF998AA0005FC1F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB881BF998AA0005FC1F /* LoginViewController.xib */; };
 		80B86E111BF42E6D006D3A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E101BF42E6D006D3A0B /* main.m */; };
 		80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E131BF42E6D006D3A0B /* AppDelegate.m */; };
 		80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E161BF42E6D006D3A0B /* ViewController.m */; };
@@ -46,7 +46,6 @@
 		455767CE134872D5F82B50C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		80A8BB741BF57D830005FC1F /* FBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
 		80A8BB751BF57D830005FC1F /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
-		80A8BB771BF57D9D0005FC1F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		80A8BB791BF592AB0005FC1F /* FBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTextField.h; sourceTree = "<group>"; };
 		80A8BB7A1BF592AB0005FC1F /* FBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTextField.m; sourceTree = "<group>"; };
 		80A8BB7D1BF5C5DF0005FC1F /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		80A8BB831BF859C80005FC1F /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
 		80A8BB851BF8C64A0005FC1F /* FBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAPI.h; sourceTree = "<group>"; };
 		80A8BB861BF8C64A0005FC1F /* FBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAPI.m; sourceTree = "<group>"; };
+		80A8BB881BF998AA0005FC1F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		80B86E0C1BF42E6D006D3A0B /* parrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B86E101BF42E6D006D3A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80B86E121BF42E6D006D3A0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 			children = (
 				80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */,
 				80B86E521BF43A21006D3A0B /* MainViewController.xib */,
-				80A8BB771BF57D9D0005FC1F /* LoginViewController.xib */,
 				80A8BB7D1BF5C5DF0005FC1F /* SignupViewController.xib */,
+				80A8BB881BF998AA0005FC1F /* LoginViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -332,8 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A8BB891BF998AA0005FC1F /* LoginViewController.xib in Resources */,
 				80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */,
-				80A8BB781BF57D9D0005FC1F /* LoginViewController.xib in Resources */,
 				80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */,
 				80A8BB7E1BF5C5DF0005FC1F /* SignupViewController.xib in Resources */,
 				80B86E3F1BF435C5006D3A0B /* CategoryCell.xib in Resources */,

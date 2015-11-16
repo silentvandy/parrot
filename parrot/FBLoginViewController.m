@@ -16,7 +16,7 @@
 
 @implementation FBLoginViewController
 
-@synthesize accountField = _accountField, passwordField = _passwordField, quickSignup = _quickSignup, forgetPassword = _forgetPassword;
+@synthesize accountField = _accountField, passwordField = _passwordField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -68,15 +68,15 @@
     
 }
 
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    [self.navigationController setNavigationBarHidden:YES animated:YES];
-//}
-//
-//- (void)viewDidDisappear:(BOOL)animated {
-//    [super viewDidDisappear:animated];
-//    [self.navigationController setNavigationBarHidden:NO animated:YES];
-//}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 - (void)bindLoginEvent:(id)sender {
     if ([self validateLoginForm] != YES) {
@@ -85,12 +85,10 @@
     
 }
 
-- (IBAction)forgotPassword:(id)sender {
-    
+- (IBAction)forgotPasswordClick:(id)sender {
 }
 
-- (IBAction)bindSignupEvent:(id)sender {
-    
+- (IBAction)quickSignupClick:(id)sender {
 }
 
 - (IBAction)bindFocusEvent:(id)sender {

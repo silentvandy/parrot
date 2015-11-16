@@ -11,19 +11,20 @@
 
 @interface FBLoginViewController : UIViewController 
 
-@property (nonatomic, weak) IBOutlet FBTextField *accountField;
-@property (nonatomic, weak) IBOutlet FBTextField *passwordField;
+@property (strong, nonatomic) IBOutlet UITextField *accountField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
 
-@property (nonatomic, weak) IBOutlet UIButton    *submitButton;
+@property (strong, nonatomic) IBOutlet UIButton *submitButton;
+@property (strong, nonatomic) IBOutlet UIButton *quickSignupButton;
+@property (strong, nonatomic) IBOutlet UIButton *forgotPasswordButton;
 
-@property (nonatomic, weak) IBOutlet UIButton    *quickSignup;
-@property (nonatomic, weak) IBOutlet UIButton    *forgetPassword;
+- (IBAction)forgotPasswordClick:(id)sender;
+- (IBAction)quickSignupClick:(id)sender;
 
-- (IBAction)forgotPassword:(id)sender;
 - (IBAction)bindFocusEvent:(id)sender;
-- (IBAction)bindSignupEvent:(id)sender;
 
 
 - (IBAction)hideKeyboard:(id)sender;
+
 
 @end
