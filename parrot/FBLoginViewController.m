@@ -8,6 +8,9 @@
 
 #import "FBLoginViewController.h"
 
+#import "FBSignupViewController.h"
+#import "FBForgotPasswordViewController.h"
+
 @interface FBLoginViewController () <UITextFieldDelegate> {
     
 }
@@ -86,9 +89,17 @@
 }
 
 - (IBAction)forgotPasswordClick:(id)sender {
+    FBForgotPasswordViewController *forgotViewController = [[FBForgotPasswordViewController alloc] initWithNibName:@"ForgotPasswordViewController" bundle:nil];
+    forgotViewController.title = @"找回密码";
+    
+    [self.navigationController pushViewController:forgotViewController animated:YES];
 }
 
 - (IBAction)quickSignupClick:(id)sender {
+    FBSignupViewController *signupViewController = [[FBSignupViewController alloc] initWithNibName:@"SignupViewController" bundle:nil];
+    signupViewController.title = @"注册";
+    //[self presentViewController:signupViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:signupViewController animated:YES];
 }
 
 - (IBAction)bindFocusEvent:(id)sender {

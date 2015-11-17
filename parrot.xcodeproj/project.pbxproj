@@ -10,10 +10,15 @@
 		07A5F624FE5EE0F51F080066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CE739E3CB4C3A92359F467 /* libPods.a */; };
 		80A8BB761BF57D830005FC1F /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB751BF57D830005FC1F /* FBLoginViewController.m */; };
 		80A8BB7B1BF592AB0005FC1F /* FBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB7A1BF592AB0005FC1F /* FBTextField.m */; };
-		80A8BB7E1BF5C5DF0005FC1F /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB7D1BF5C5DF0005FC1F /* SignupViewController.xib */; };
 		80A8BB841BF859C80005FC1F /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB831BF859C80005FC1F /* FBRequest.m */; };
 		80A8BB871BF8C64A0005FC1F /* FBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB861BF8C64A0005FC1F /* FBAPI.m */; };
 		80A8BB891BF998AA0005FC1F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB881BF998AA0005FC1F /* LoginViewController.xib */; };
+		80A8BB8C1BFA106D0005FC1F /* FBSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB8B1BFA106D0005FC1F /* FBSignupViewController.m */; };
+		80A8BB8E1BFA10B50005FC1F /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB8D1BFA10B50005FC1F /* SignupViewController.xib */; };
+		80A8BB911BFA1BF50005FC1F /* FBForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB901BFA1BF50005FC1F /* FBForgotPasswordViewController.m */; };
+		80A8BB931BFA1C100005FC1F /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB921BFA1C100005FC1F /* ForgotPasswordViewController.xib */; };
+		80A8BB961BFA1FB10005FC1F /* FBResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB951BFA1FB10005FC1F /* FBResetPasswordViewController.m */; };
+		80A8BB981BFA1FD40005FC1F /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB971BFA1FD40005FC1F /* ResetPasswordViewController.xib */; };
 		80B86E111BF42E6D006D3A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E101BF42E6D006D3A0B /* main.m */; };
 		80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E131BF42E6D006D3A0B /* AppDelegate.m */; };
 		80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E161BF42E6D006D3A0B /* ViewController.m */; };
@@ -48,12 +53,20 @@
 		80A8BB751BF57D830005FC1F /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
 		80A8BB791BF592AB0005FC1F /* FBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTextField.h; sourceTree = "<group>"; };
 		80A8BB7A1BF592AB0005FC1F /* FBTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTextField.m; sourceTree = "<group>"; };
-		80A8BB7D1BF5C5DF0005FC1F /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		80A8BB821BF859C80005FC1F /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
 		80A8BB831BF859C80005FC1F /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
 		80A8BB851BF8C64A0005FC1F /* FBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAPI.h; sourceTree = "<group>"; };
 		80A8BB861BF8C64A0005FC1F /* FBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAPI.m; sourceTree = "<group>"; };
 		80A8BB881BF998AA0005FC1F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		80A8BB8A1BFA106D0005FC1F /* FBSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSignupViewController.h; sourceTree = "<group>"; };
+		80A8BB8B1BFA106D0005FC1F /* FBSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSignupViewController.m; sourceTree = "<group>"; };
+		80A8BB8D1BFA10B50005FC1F /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		80A8BB8F1BFA1BF50005FC1F /* FBForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBForgotPasswordViewController.h; sourceTree = "<group>"; };
+		80A8BB901BFA1BF50005FC1F /* FBForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBForgotPasswordViewController.m; sourceTree = "<group>"; };
+		80A8BB921BFA1C100005FC1F /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		80A8BB941BFA1FB10005FC1F /* FBResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBResetPasswordViewController.h; sourceTree = "<group>"; };
+		80A8BB951BFA1FB10005FC1F /* FBResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBResetPasswordViewController.m; sourceTree = "<group>"; };
+		80A8BB971BFA1FD40005FC1F /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		80B86E0C1BF42E6D006D3A0B /* parrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B86E101BF42E6D006D3A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80B86E121BF42E6D006D3A0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -207,6 +220,12 @@
 				80B86E641BF43BD6006D3A0B /* FBMainViewController.m */,
 				80A8BB741BF57D830005FC1F /* FBLoginViewController.h */,
 				80A8BB751BF57D830005FC1F /* FBLoginViewController.m */,
+				80A8BB8A1BFA106D0005FC1F /* FBSignupViewController.h */,
+				80A8BB8B1BFA106D0005FC1F /* FBSignupViewController.m */,
+				80A8BB8F1BFA1BF50005FC1F /* FBForgotPasswordViewController.h */,
+				80A8BB901BFA1BF50005FC1F /* FBForgotPasswordViewController.m */,
+				80A8BB941BFA1FB10005FC1F /* FBResetPasswordViewController.h */,
+				80A8BB951BFA1FB10005FC1F /* FBResetPasswordViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -229,8 +248,10 @@
 			children = (
 				80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */,
 				80B86E521BF43A21006D3A0B /* MainViewController.xib */,
-				80A8BB7D1BF5C5DF0005FC1F /* SignupViewController.xib */,
 				80A8BB881BF998AA0005FC1F /* LoginViewController.xib */,
+				80A8BB8D1BFA10B50005FC1F /* SignupViewController.xib */,
+				80A8BB921BFA1C100005FC1F /* ForgotPasswordViewController.xib */,
+				80A8BB971BFA1FD40005FC1F /* ResetPasswordViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -332,10 +353,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A8BB931BFA1C100005FC1F /* ForgotPasswordViewController.xib in Resources */,
 				80A8BB891BF998AA0005FC1F /* LoginViewController.xib in Resources */,
+				80A8BB981BFA1FD40005FC1F /* ResetPasswordViewController.xib in Resources */,
+				80A8BB8E1BFA10B50005FC1F /* SignupViewController.xib in Resources */,
 				80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */,
 				80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */,
-				80A8BB7E1BF5C5DF0005FC1F /* SignupViewController.xib in Resources */,
 				80B86E3F1BF435C5006D3A0B /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,11 +428,14 @@
 				80A8BB7B1BF592AB0005FC1F /* FBTextField.m in Sources */,
 				80B86E681BF44FBA006D3A0B /* FBAddressModel.m in Sources */,
 				80B86E6E1BF49085006D3A0B /* FBSkuModel.m in Sources */,
+				80A8BB961BFA1FB10005FC1F /* FBResetPasswordViewController.m in Sources */,
+				80A8BB8C1BFA106D0005FC1F /* FBSignupViewController.m in Sources */,
 				80B86E451BF436C1006D3A0B /* FBSlides.m in Sources */,
 				80B86E711BF49121006D3A0B /* FBProductModel.m in Sources */,
 				80B86E4E1BF4392A006D3A0B /* NSString+FBMD5.m in Sources */,
 				80B86E371BF434BA006D3A0B /* FBCategoryModel.m in Sources */,
 				80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */,
+				80A8BB911BFA1BF50005FC1F /* FBForgotPasswordViewController.m in Sources */,
 				80B86E5F1BF43B20006D3A0B /* FBCategoryViewController.m in Sources */,
 				80B86E591BF43ADD006D3A0B /* FBAccountViewController.m in Sources */,
 				80B86E111BF42E6D006D3A0B /* main.m in Sources */,
