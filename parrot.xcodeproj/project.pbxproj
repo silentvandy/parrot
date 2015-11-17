@@ -19,16 +19,22 @@
 		80A8BB931BFA1C100005FC1F /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB921BFA1C100005FC1F /* ForgotPasswordViewController.xib */; };
 		80A8BB961BFA1FB10005FC1F /* FBResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB951BFA1FB10005FC1F /* FBResetPasswordViewController.m */; };
 		80A8BB981BFA1FD40005FC1F /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB971BFA1FD40005FC1F /* ResetPasswordViewController.xib */; };
+		80A8BB9B1BFAE2B20005FC1F /* FBOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB9A1BFAE2B20005FC1F /* FBOrderListViewController.m */; };
+		80A8BB9E1BFAE2C80005FC1F /* FBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB9D1BFAE2C80005FC1F /* FBOrderDetailViewController.m */; };
+		80A8BBA01BFAE4120005FC1F /* OrderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BB9F1BFAE4120005FC1F /* OrderListViewController.xib */; };
+		80A8BBA21BFAE9040005FC1F /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BBA11BFAE9040005FC1F /* CategoryCell.xib */; };
+		80A8BBA41BFAF8570005FC1F /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BBA31BFAF8570005FC1F /* CategoryViewController.xib */; };
+		80A8BBA71BFB16A40005FC1F /* FBCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BBA61BFB16A40005FC1F /* FBCategoryCell.m */; };
+		80A8BBAA1BFB5E5D0005FC1F /* FBProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BBA91BFB5E5C0005FC1F /* FBProductListViewController.m */; };
+		80A8BBB01BFB636E0005FC1F /* FBProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BBAF1BFB636E0005FC1F /* FBProductCell.m */; };
+		80A8BBB21BFB63BC0005FC1F /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A8BBB11BFB63BC0005FC1F /* ProductCell.xib */; };
 		80B86E111BF42E6D006D3A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E101BF42E6D006D3A0B /* main.m */; };
 		80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E131BF42E6D006D3A0B /* AppDelegate.m */; };
-		80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E161BF42E6D006D3A0B /* ViewController.m */; };
 		80B86E1D1BF42E6D006D3A0B /* parrot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E1B1BF42E6D006D3A0B /* parrot.xcdatamodeld */; };
 		80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B86E1E1BF42E6D006D3A0B /* Assets.xcassets */; };
 		80B86E341BF4346A006D3A0B /* FBAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E331BF4346A006D3A0B /* FBAdModel.m */; };
 		80B86E371BF434BA006D3A0B /* FBCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E361BF434BA006D3A0B /* FBCategoryModel.m */; };
 		80B86E3A1BF434DF006D3A0B /* FBUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E391BF434DF006D3A0B /* FBUserModel.m */; };
-		80B86E3D1BF43550006D3A0B /* FBCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E3C1BF43550006D3A0B /* FBCategoryCell.m */; };
-		80B86E3F1BF435C5006D3A0B /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */; };
 		80B86E451BF436C1006D3A0B /* FBSlides.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E441BF436C1006D3A0B /* FBSlides.m */; };
 		80B86E481BF437C3006D3A0B /* FBUserManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E471BF437C3006D3A0B /* FBUserManger.m */; };
 		80B86E4B1BF438EE006D3A0B /* NSDictionary+ModelParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B86E4A1BF438EE006D3A0B /* NSDictionary+ModelParse.m */; };
@@ -67,12 +73,24 @@
 		80A8BB941BFA1FB10005FC1F /* FBResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBResetPasswordViewController.h; sourceTree = "<group>"; };
 		80A8BB951BFA1FB10005FC1F /* FBResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBResetPasswordViewController.m; sourceTree = "<group>"; };
 		80A8BB971BFA1FD40005FC1F /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		80A8BB991BFAE2B20005FC1F /* FBOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOrderListViewController.h; sourceTree = "<group>"; };
+		80A8BB9A1BFAE2B20005FC1F /* FBOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOrderListViewController.m; sourceTree = "<group>"; };
+		80A8BB9C1BFAE2C80005FC1F /* FBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOrderDetailViewController.h; sourceTree = "<group>"; };
+		80A8BB9D1BFAE2C80005FC1F /* FBOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOrderDetailViewController.m; sourceTree = "<group>"; };
+		80A8BB9F1BFAE4120005FC1F /* OrderListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderListViewController.xib; sourceTree = "<group>"; };
+		80A8BBA11BFAE9040005FC1F /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		80A8BBA31BFAF8570005FC1F /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		80A8BBA51BFB16A40005FC1F /* FBCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCategoryCell.h; sourceTree = "<group>"; };
+		80A8BBA61BFB16A40005FC1F /* FBCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCategoryCell.m; sourceTree = "<group>"; };
+		80A8BBA81BFB5E5C0005FC1F /* FBProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProductListViewController.h; sourceTree = "<group>"; };
+		80A8BBA91BFB5E5C0005FC1F /* FBProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProductListViewController.m; sourceTree = "<group>"; };
+		80A8BBAE1BFB636E0005FC1F /* FBProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProductCell.h; sourceTree = "<group>"; };
+		80A8BBAF1BFB636E0005FC1F /* FBProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProductCell.m; sourceTree = "<group>"; };
+		80A8BBB11BFB63BC0005FC1F /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		80B86E0C1BF42E6D006D3A0B /* parrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B86E101BF42E6D006D3A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80B86E121BF42E6D006D3A0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80B86E131BF42E6D006D3A0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		80B86E151BF42E6D006D3A0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		80B86E161BF42E6D006D3A0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		80B86E1C1BF42E6D006D3A0B /* parrot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = parrot.xcdatamodel; sourceTree = "<group>"; };
 		80B86E1E1BF42E6D006D3A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80B86E231BF42E6D006D3A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,9 +101,6 @@
 		80B86E361BF434BA006D3A0B /* FBCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCategoryModel.m; sourceTree = "<group>"; };
 		80B86E381BF434DF006D3A0B /* FBUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUserModel.h; sourceTree = "<group>"; };
 		80B86E391BF434DF006D3A0B /* FBUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUserModel.m; sourceTree = "<group>"; };
-		80B86E3B1BF43550006D3A0B /* FBCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCategoryCell.h; sourceTree = "<group>"; };
-		80B86E3C1BF43550006D3A0B /* FBCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCategoryCell.m; sourceTree = "<group>"; };
-		80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		80B86E431BF436C1006D3A0B /* FBSlides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSlides.h; sourceTree = "<group>"; };
 		80B86E441BF436C1006D3A0B /* FBSlides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSlides.m; sourceTree = "<group>"; };
 		80B86E461BF437C3006D3A0B /* FBUserManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUserManger.h; sourceTree = "<group>"; };
@@ -133,6 +148,10 @@
 		80A8BB7C1BF5C3CC0005FC1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				80A8BBA51BFB16A40005FC1F /* FBCategoryCell.h */,
+				80A8BBA61BFB16A40005FC1F /* FBCategoryCell.m */,
+				80A8BBAE1BFB636E0005FC1F /* FBProductCell.h */,
+				80A8BBAF1BFB636E0005FC1F /* FBProductCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -166,8 +185,6 @@
 				80B86E291BF43287006D3A0B /* Model */,
 				80B86E121BF42E6D006D3A0B /* AppDelegate.h */,
 				80B86E131BF42E6D006D3A0B /* AppDelegate.m */,
-				80B86E151BF42E6D006D3A0B /* ViewController.h */,
-				80B86E161BF42E6D006D3A0B /* ViewController.m */,
 				80B86E1E1BF42E6D006D3A0B /* Assets.xcassets */,
 				80B86E231BF42E6D006D3A0B /* Info.plist */,
 				80B86E1B1BF42E6D006D3A0B /* parrot.xcdatamodeld */,
@@ -226,6 +243,12 @@
 				80A8BB901BFA1BF50005FC1F /* FBForgotPasswordViewController.m */,
 				80A8BB941BFA1FB10005FC1F /* FBResetPasswordViewController.h */,
 				80A8BB951BFA1FB10005FC1F /* FBResetPasswordViewController.m */,
+				80A8BB991BFAE2B20005FC1F /* FBOrderListViewController.h */,
+				80A8BB9A1BFAE2B20005FC1F /* FBOrderListViewController.m */,
+				80A8BB9C1BFAE2C80005FC1F /* FBOrderDetailViewController.h */,
+				80A8BB9D1BFAE2C80005FC1F /* FBOrderDetailViewController.m */,
+				80A8BBA81BFB5E5C0005FC1F /* FBProductListViewController.h */,
+				80A8BBA91BFB5E5C0005FC1F /* FBProductListViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,12 +269,15 @@
 		80B86E2C1BF432DE006D3A0B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				80B86E3E1BF435C5006D3A0B /* CategoryCell.xib */,
 				80B86E521BF43A21006D3A0B /* MainViewController.xib */,
 				80A8BB881BF998AA0005FC1F /* LoginViewController.xib */,
 				80A8BB8D1BFA10B50005FC1F /* SignupViewController.xib */,
 				80A8BB921BFA1C100005FC1F /* ForgotPasswordViewController.xib */,
 				80A8BB971BFA1FD40005FC1F /* ResetPasswordViewController.xib */,
+				80A8BB9F1BFAE4120005FC1F /* OrderListViewController.xib */,
+				80A8BBA11BFAE9040005FC1F /* CategoryCell.xib */,
+				80A8BBA31BFAF8570005FC1F /* CategoryViewController.xib */,
+				80A8BBB11BFB63BC0005FC1F /* ProductCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -259,15 +285,13 @@
 		80B86E2D1BF432E8006D3A0B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				80A8BB791BF592AB0005FC1F /* FBTextField.h */,
+				80A8BB7A1BF592AB0005FC1F /* FBTextField.m */,
 				80B86E311BF433FD006D3A0B /* FBConfig.h */,
-				80B86E3B1BF43550006D3A0B /* FBCategoryCell.h */,
-				80B86E3C1BF43550006D3A0B /* FBCategoryCell.m */,
 				80B86E431BF436C1006D3A0B /* FBSlides.h */,
 				80B86E441BF436C1006D3A0B /* FBSlides.m */,
 				80B86E461BF437C3006D3A0B /* FBUserManger.h */,
 				80B86E471BF437C3006D3A0B /* FBUserManger.m */,
-				80A8BB791BF592AB0005FC1F /* FBTextField.h */,
-				80A8BB7A1BF592AB0005FC1F /* FBTextField.m */,
 				80A8BB821BF859C80005FC1F /* FBRequest.h */,
 				80A8BB831BF859C80005FC1F /* FBRequest.m */,
 				80A8BB851BF8C64A0005FC1F /* FBAPI.h */,
@@ -356,10 +380,13 @@
 				80A8BB931BFA1C100005FC1F /* ForgotPasswordViewController.xib in Resources */,
 				80A8BB891BF998AA0005FC1F /* LoginViewController.xib in Resources */,
 				80A8BB981BFA1FD40005FC1F /* ResetPasswordViewController.xib in Resources */,
+				80A8BBA01BFAE4120005FC1F /* OrderListViewController.xib in Resources */,
 				80A8BB8E1BFA10B50005FC1F /* SignupViewController.xib in Resources */,
+				80A8BBA41BFAF8570005FC1F /* CategoryViewController.xib in Resources */,
 				80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */,
+				80A8BBB21BFB63BC0005FC1F /* ProductCell.xib in Resources */,
 				80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */,
-				80B86E3F1BF435C5006D3A0B /* CategoryCell.xib in Resources */,
+				80A8BBA21BFAE9040005FC1F /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +448,6 @@
 				80B86E3A1BF434DF006D3A0B /* FBUserModel.m in Sources */,
 				80A8BB841BF859C80005FC1F /* FBRequest.m in Sources */,
 				80B86E621BF43B61006D3A0B /* FBTrialViewController.m in Sources */,
-				80B86E3D1BF43550006D3A0B /* FBCategoryCell.m in Sources */,
-				80B86E171BF42E6D006D3A0B /* ViewController.m in Sources */,
 				80A8BB871BF8C64A0005FC1F /* FBAPI.m in Sources */,
 				80B86E141BF42E6D006D3A0B /* AppDelegate.m in Sources */,
 				80A8BB7B1BF592AB0005FC1F /* FBTextField.m in Sources */,
@@ -437,16 +462,21 @@
 				80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */,
 				80A8BB911BFA1BF50005FC1F /* FBForgotPasswordViewController.m in Sources */,
 				80B86E5F1BF43B20006D3A0B /* FBCategoryViewController.m in Sources */,
+				80A8BBA71BFB16A40005FC1F /* FBCategoryCell.m in Sources */,
 				80B86E591BF43ADD006D3A0B /* FBAccountViewController.m in Sources */,
+				80A8BBB01BFB636E0005FC1F /* FBProductCell.m in Sources */,
 				80B86E111BF42E6D006D3A0B /* main.m in Sources */,
 				80B86E341BF4346A006D3A0B /* FBAdModel.m in Sources */,
+				80A8BBAA1BFB5E5D0005FC1F /* FBProductListViewController.m in Sources */,
 				80B86E481BF437C3006D3A0B /* FBUserManger.m in Sources */,
 				80A8BB761BF57D830005FC1F /* FBLoginViewController.m in Sources */,
 				80B86E4B1BF438EE006D3A0B /* NSDictionary+ModelParse.m in Sources */,
 				80B86E511BF43962006D3A0B /* NSMutableDictionary+AddSign.m in Sources */,
 				80B86E1D1BF42E6D006D3A0B /* parrot.xcdatamodeld in Sources */,
 				80B86E6B1BF44FFB006D3A0B /* FBOrderModel.m in Sources */,
+				80A8BB9E1BFAE2C80005FC1F /* FBOrderDetailViewController.m in Sources */,
 				80B86E5C1BF43AFA006D3A0B /* FBFindViewController.m in Sources */,
+				80A8BB9B1BFAE2B20005FC1F /* FBOrderListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

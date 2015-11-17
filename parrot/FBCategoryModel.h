@@ -28,4 +28,7 @@
 // 子数量
 @property (nonatomic, assign) int cateCount;
 
+
+- (NSArray *)asignModelWithObject:(id)resultObject;
+
 @end

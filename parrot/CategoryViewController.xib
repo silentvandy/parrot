@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FBCategoryViewController">
+            <connections>
+                <outlet property="tableView" destination="EzY-cH-Rsy" id="HaI-06-ZxI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zKg-aI-4MG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="589"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EzY-cH-Rsy">
+                    <rect key="frame" x="0.0" y="0.0" width="362" height="589"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EzY-cH-Rsy" secondAttribute="trailing" id="IwV-26-QaS"/>
+                <constraint firstAttribute="bottom" secondItem="EzY-cH-Rsy" secondAttribute="bottom" id="V89-i3-1O5"/>
+                <constraint firstItem="EzY-cH-Rsy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZQr-aU-T9N"/>
+                <constraint firstItem="EzY-cH-Rsy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xle-7W-bho"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="178" y="390.5"/>
+        </view>
+    </objects>
+</document>

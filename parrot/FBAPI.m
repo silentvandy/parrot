@@ -148,7 +148,7 @@
                requestDictionary:(NSDictionary *)requestDictionary
                         delegate:(id)delegate {
     
-    return [FBAPI requestWithUrlString:[kBaseUrl stringByAppendingString:urlString]
+    return [FBAPI requestWithUrlString:[kDomainBaseUrl stringByAppendingString:urlString]
                      requestDictionary:requestDictionary
                               delegate:delegate
                        timeoutInterval:nil
@@ -162,7 +162,7 @@
                 requestDictionary:(NSDictionary *)requestDictionary
                          delegate:(id)delegate {
     
-    return [FBAPI requestWithUrlString:[kBaseUrl stringByAppendingString:urlString]
+    return [FBAPI requestWithUrlString:[kDomainBaseUrl stringByAppendingString:urlString]
                      requestDictionary:requestDictionary
                               delegate:delegate
                        timeoutInterval:nil
@@ -176,7 +176,7 @@
                   requestDictionary:(NSDictionary *)requestDictionary
                            delegate:(id)delegate {
     
-    return [FBAPI requestWithUrlString:[kBaseUrl stringByAppendingString:urlString]
+    return [FBAPI requestWithUrlString:[kDomainBaseUrl stringByAppendingString:urlString]
                      requestDictionary:requestDictionary
                               delegate:delegate
                        timeoutInterval:nil

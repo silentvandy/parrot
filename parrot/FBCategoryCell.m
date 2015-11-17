@@ -2,36 +2,45 @@
 //  FBCategoryCell.m
 //  parrot
 //
-//  Created by xiaoyi on 15/11/12.
+//  Created by xiaoyi on 15/11/17.
 //  Copyright © 2015年 taihuoniao. All rights reserved.
 //
 
 #import "FBCategoryCell.h"
 
+#import "FBConfig.h"
+#import "FBCategoryModel.h"
+#import "UIImageView+WebCache.h"
+
+@interface FBCategoryCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *categoryImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation FBCategoryCell
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+
+- (void)showCellWithModel:(FBCategoryModel *)model {
     
-    if (self) {
-        // 初始化时加载FrbirdCollectionCell.xib文件
-        NSArray *aryOfViews = [[NSBundle mainBundle] loadNibNamed:@"CategoryCell" owner:self options:nil];
-        
-        // 如果路径不存在， 返回nil
-        if (aryOfViews.count < 1) {
-            return nil;
-        }
-        
-        // xib中view不属于UICollectionViewCell类，返回nil
-        if (![[aryOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
-            return nil;
-        }
-        
-        // 加载nib
-        self = [aryOfViews objectAtIndex:0];
-    }
+    self.titleLabel.text = model.cateTitle;
+    self.titleLabel.font = [UIFont fontWithName:kFontFamily size:18.0f];
+    self.titleLabel.textColor = [UIColor whiteColor];
     
-    return self;
+    [self.categoryImageView sd_setImageWithURL:[NSURL URLWithString:model.cateImage]];
+    
+}
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
 }
 
 @end

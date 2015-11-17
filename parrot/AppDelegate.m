@@ -60,7 +60,7 @@
     
     // 生成RootViewController
     _mainViewController     = [[FBMainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    _categoryViewController = [[FBCategoryViewController alloc] init];
+    _categoryViewController = [[FBCategoryViewController alloc] initWithNibName:@"CategoryViewController" bundle:nil];
     _findViewController     = [[FBFindViewController alloc] init];
     _trialViewController    = [[FBTrialViewController alloc] init];
     _accountViewController  = [[FBAccountViewController alloc] init];

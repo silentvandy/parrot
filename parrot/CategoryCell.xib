@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="fda-49-11u" customClass="FBCategoryCell">
-            <rect key="frame" x="0.0" y="0.0" width="191" height="165"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="191" height="165"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="157" id="Q3i-Xu-gcc" customClass="FBCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q3i-Xu-gcc" id="biO-2m-HbS">
+                <rect key="frame" x="0.0" y="0.0" width="455" height="156.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qrw-uv-wTQ">
-                        <rect key="frame" x="0.0" y="0.0" width="191" height="170"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIZ-ZW-0zQ">
+                        <rect key="frame" x="8" y="8" width="439" height="140.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM2-8x-vKH">
-                        <rect key="frame" x="21" y="126" width="156" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分类名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC9-RX-fxE">
+                        <rect key="frame" x="193.5" y="68.5" width="68" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            </view>
-            <size key="customSize" width="191" height="165"/>
+                <constraints>
+                    <constraint firstItem="HC9-RX-fxE" firstAttribute="centerY" secondItem="uIZ-ZW-0zQ" secondAttribute="centerY" id="3kQ-dG-Vp4"/>
+                    <constraint firstItem="uIZ-ZW-0zQ" firstAttribute="leading" secondItem="biO-2m-HbS" secondAttribute="leadingMargin" id="8I9-FM-n3V"/>
+                    <constraint firstItem="uIZ-ZW-0zQ" firstAttribute="top" secondItem="biO-2m-HbS" secondAttribute="topMargin" id="D8h-dF-g73"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uIZ-ZW-0zQ" secondAttribute="trailing" id="H7F-fW-xtQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="uIZ-ZW-0zQ" secondAttribute="bottom" id="m9y-a3-Xi8"/>
+                    <constraint firstItem="HC9-RX-fxE" firstAttribute="centerX" secondItem="uIZ-ZW-0zQ" secondAttribute="centerX" id="zEP-Ki-mx8"/>
+                </constraints>
+            </tableViewCellContentView>
             <connections>
-                <outlet property="categoryName" destination="UM2-8x-vKH" id="AMv-Xr-kKU"/>
-                <outlet property="categoryPhoto" destination="Qrw-uv-wTQ" id="Lqj-4H-3MQ"/>
+                <outlet property="categoryImageView" destination="uIZ-ZW-0zQ" id="8tf-qw-nFl"/>
+                <outlet property="titleLabel" destination="HC9-RX-fxE" id="o6g-Ga-aOW"/>
             </connections>
-            <point key="canvasLocation" x="218.5" y="236.5"/>
-        </collectionViewCell>
+            <point key="canvasLocation" x="260.5" y="275.5"/>
+        </tableViewCell>
     </objects>
 </document>

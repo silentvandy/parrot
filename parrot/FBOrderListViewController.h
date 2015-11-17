@@ -1,14 +1,14 @@
 //
-//  FBCategoryViewController.h
+//  FBOrderListViewController.h
 //  parrot
 //
-//  Created by xiaoyi on 15/11/12.
+//  Created by xiaoyi on 15/11/17.
 //  Copyright © 2015年 taihuoniao. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface FBCategoryViewController : UIViewController
+@interface FBOrderListViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

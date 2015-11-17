@@ -135,7 +135,6 @@ static CGFloat FOCUS_INTERVAL = 5.0;
 
 // 移动位置
 - (void)moveToTargetPosition:(CGFloat)targetX {
-    NSLog(@"drag x: %f", targetX);
     [_scrollView setContentOffset:CGPointMake(targetX, 0) animated:YES];
 }
 
@@ -186,7 +185,7 @@ static CGFloat FOCUS_INTERVAL = 5.0;
     if (!decelerate) {
         CGFloat targetX = _scrollView.contentOffset.x + _scrollView.frame.size.width;
         targetX = (int)(targetX/kItemWidth) * kItemWidth;
-        NSLog(@"drag x: %f", targetX);
+        // NSLog(@"drag x: %f", targetX);
         [self moveToTargetPosition:targetX];
     }
 }

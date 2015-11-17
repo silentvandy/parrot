@@ -1,5 +1,5 @@
 //
-//  FBCategoryCell.h
+//  FBProductListViewController.h
 //  parrot
 //
 //  Created by xiaoyi on 15/11/17.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class FBCategoryModel;
-
-@interface FBCategoryCell : UITableViewCell
-
-- (void)showCellWithModel:(FBCategoryModel *)model;
+@interface FBProductListViewController : UICollectionViewController
 
 @end

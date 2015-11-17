@@ -15,6 +15,8 @@
 #import "FBAPI.h"
 #import "FBAdModel.h"
 
+#import "FBOrderListViewController.h"
+
 #define AD_DATA    @"AD_DATA"
 
 @interface FBMainViewController () <FBRequestDelegate> {
@@ -73,7 +75,7 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                    @"app_index_slide", @"name",
                                    @"5", @"size", nil];
-    self.adsRequest = [FBAPI getWithUrlString:kMainSlide requestDictionary:params delegate:self];
+    self.adsRequest = [FBAPI getWithUrlString:kURLMainSlide requestDictionary:params delegate:self];
     self.adsRequest.flag = AD_DATA;
     NSLog(@"request start!");
     [self.adsRequest startRequest];
@@ -139,11 +141,11 @@
 //}
 
 - (void)slide:(FBSlides *)slide currentItem:(int)index {
-    NSLog(@"%s \n scrollToIndex ===> %d", __FUNCTION__, index);
+    //NSLog(@"%s \n scrollToIndex ===> %d", __FUNCTION__, index);
 }
 
 - (void)slide:(FBSlides *)slide didSelectItem:(FBAdModel *)item {
-    NSLog(@"%s \n click===>%@", __FUNCTION__, item.adTitle);
+    //NSLog(@"%s \n click===>%@", __FUNCTION__, item.adTitle);
 }
 
 

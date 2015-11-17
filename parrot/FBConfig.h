@@ -50,20 +50,21 @@
 
 #define kSlideBannerHeight 225.00001f
 #define kMainTabelCellHeight 266
+#define kCategoryCellHeight 100.0f
 
 
 // API ROOT URL
-#define kBaseUrl @"http://taihuoniao.me/app/api"
+#define kDomainBaseUrl @"http://taihuoniao.me/app/api"
 
 /*
  * API URL
  */
 // 首页
-#define kMainSlide            @"/gateway/slide"
+#define kURLMainSlide            @"/gateway/slide"
 
 // 产品分类列表
-#define kCategoryList         @"/product/category"
-#define kProductList          @"/product/getlist"
+#define kURLCategoryList         @"/product/category"
+#define kURLProductList          @"/product/getlist"
 
 
 
