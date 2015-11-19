@@ -1,5 +1,5 @@
 //
-//  FBProductCell.h
+//  FBLineLabel.h
 //  parrot
 //
 //  Created by xiaoyi on 15/11/17.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class FBProductModel;
-
-@interface FBProductCell : UICollectionViewCell
-
-- (void)showCellWithModel:(FBProductModel *)model;
+@interface FBLineLabel : UILabel
 
 @end

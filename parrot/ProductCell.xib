@@ -7,16 +7,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jea-Q2-RiT">
-            <rect key="frame" x="0.0" y="0.0" width="193" height="152"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="jea-Q2-RiT" customClass="FBProductCell">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="213"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="193" height="152"/>
+                <rect key="frame" x="0.0" y="0.0" width="240" height="213"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xcS-bz-pah">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="112"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="112" id="jQZ-ML-j8N"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8r-pI-imI" userLabel="productInfo">
+                        <rect key="frame" x="0.0" y="112" width="240" height="101"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="产品名称" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTf-Xe-HDz">
+                                <rect key="frame" x="8" y="8" width="224" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB6-TX-Olg">
+                                <rect key="frame" x="8" y="73" width="60" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="qjj-KR-7Pe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kB6-TX-Olg" secondAttribute="bottom" constant="11" id="MkA-Uq-sZA"/>
+                            <constraint firstItem="CTf-Xe-HDz" firstAttribute="top" secondItem="k8r-pI-imI" secondAttribute="top" constant="8" id="Qpz-Wy-Ki1"/>
+                            <constraint firstItem="kB6-TX-Olg" firstAttribute="leading" secondItem="k8r-pI-imI" secondAttribute="leading" constant="8" id="WRR-6M-FQT"/>
+                            <constraint firstItem="CTf-Xe-HDz" firstAttribute="leading" secondItem="k8r-pI-imI" secondAttribute="leading" constant="8" id="dxv-Er-sOm"/>
+                            <constraint firstAttribute="trailing" secondItem="CTf-Xe-HDz" secondAttribute="trailing" constant="8" id="j3Z-e3-I1c"/>
+                        </constraints>
+                    </view>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <size key="customSize" width="193" height="152"/>
-            <point key="canvasLocation" x="224.5" y="218"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="k8r-pI-imI" secondAttribute="bottom" id="J8Z-XU-ptu"/>
+                <constraint firstItem="k8r-pI-imI" firstAttribute="top" secondItem="xcS-bz-pah" secondAttribute="bottom" id="Nf1-gN-2fa"/>
+                <constraint firstItem="k8r-pI-imI" firstAttribute="leading" secondItem="jea-Q2-RiT" secondAttribute="leading" id="Wbt-vb-fkX"/>
+                <constraint firstAttribute="trailing" secondItem="k8r-pI-imI" secondAttribute="trailing" id="aaW-PM-PDM"/>
+                <constraint firstAttribute="trailing" secondItem="xcS-bz-pah" secondAttribute="trailing" id="k17-5M-IhR"/>
+                <constraint firstItem="xcS-bz-pah" firstAttribute="top" secondItem="jea-Q2-RiT" secondAttribute="top" id="s2l-pz-wz5"/>
+                <constraint firstItem="xcS-bz-pah" firstAttribute="leading" secondItem="jea-Q2-RiT" secondAttribute="leading" id="w4L-kn-vWg"/>
+            </constraints>
+            <size key="customSize" width="273" height="213"/>
+            <connections>
+                <outlet property="productCover" destination="xcS-bz-pah" id="cFL-xa-DMn"/>
+                <outlet property="titleLabel" destination="CTf-Xe-HDz" id="odS-QQ-qLi"/>
+                <outlet property="userPriceLabel" destination="kB6-TX-Olg" id="aMq-rb-1Nv"/>
+            </connections>
+            <point key="canvasLocation" x="13" y="311.5"/>
         </collectionViewCell>
     </objects>
 </document>

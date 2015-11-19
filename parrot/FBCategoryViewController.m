@@ -8,14 +8,17 @@
 
 #import "FBCategoryViewController.h"
 
+#import "MJRefresh.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 #import "FBAPI.h"
 #import "FBConfig.h"
 #import "FBRequest.h"
 #import "FBCategoryCell.h"
 #import "FBCategoryModel.h"
 
-#import "MJRefresh.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "FBProductListViewController.h"
+
 
 @interface FBCategoryViewController ()<UITableViewDataSource, UITableViewDelegate, FBRequestDelegate> {
     FBAPI *_categoryReqeust;
@@ -114,10 +117,7 @@ static NSString * const reuseIdentifier = @"CategoryCell";
 #pragma mark - FBRequestDelegate
 
 - (void)requestSucess:(FBRequest *)request result:(id)result {
-    NSLog(@"Category result: %@", result);
-    
     if ([request.flag isEqualToString:kCategoryData]) {
-        NSLog(@"Flag: %@", request.flag);
         
         // 装载Model数据
         FBCategoryModel *categoryModel = [[FBCategoryModel alloc] init];
@@ -167,7 +167,10 @@ static NSString * const reuseIdentifier = @"CategoryCell";
     
     NSLog(@"Select category: %@", selectedCategory);
     
+    FBProductListViewController *productListViewController = [[FBProductListViewController alloc] initWithNibName:@"ProductListViewController" bundle:nil];
+    productListViewController.selectedCategory = selectedCategory;
     
+    [self.navigationController pushViewController:productListViewController animated:YES];
 }
 
 
