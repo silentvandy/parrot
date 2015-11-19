@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07A5F624FE5EE0F51F080066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CE739E3CB4C3A92359F467 /* libPods.a */; };
+		803F114E1BFD9120001AD86A /* FBProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 803F114D1BFD9120001AD86A /* FBProductDetailViewController.m */; };
+		803F11501BFD9146001AD86A /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803F114F1BFD9146001AD86A /* ProductDetailViewController.xib */; };
 		80A8BB761BF57D830005FC1F /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB751BF57D830005FC1F /* FBLoginViewController.m */; };
 		80A8BB7B1BF592AB0005FC1F /* FBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB7A1BF592AB0005FC1F /* FBTextField.m */; };
 		80A8BB841BF859C80005FC1F /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB831BF859C80005FC1F /* FBRequest.m */; };
@@ -57,6 +59,9 @@
 /* Begin PBXFileReference section */
 		08CE739E3CB4C3A92359F467 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		455767CE134872D5F82B50C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		803F114C1BFD9120001AD86A /* FBProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProductDetailViewController.h; sourceTree = "<group>"; };
+		803F114D1BFD9120001AD86A /* FBProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProductDetailViewController.m; sourceTree = "<group>"; };
+		803F114F1BFD9146001AD86A /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		80A8BB741BF57D830005FC1F /* FBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
 		80A8BB751BF57D830005FC1F /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
 		80A8BB791BF592AB0005FC1F /* FBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTextField.h; sourceTree = "<group>"; };
@@ -256,6 +261,8 @@
 				80A8BB9D1BFAE2C80005FC1F /* FBOrderDetailViewController.m */,
 				80A8BBB81BFC175E0005FC1F /* FBProductListViewController.h */,
 				80A8BBB91BFC175E0005FC1F /* FBProductListViewController.m */,
+				803F114C1BFD9120001AD86A /* FBProductDetailViewController.h */,
+				803F114D1BFD9120001AD86A /* FBProductDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -286,6 +293,7 @@
 				80A8BBA31BFAF8570005FC1F /* CategoryViewController.xib */,
 				80A8BBB11BFB63BC0005FC1F /* ProductCell.xib */,
 				80A8BBBB1BFC17740005FC1F /* ProductListViewController.xib */,
+				803F114F1BFD9146001AD86A /* ProductDetailViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 				80A8BBB21BFB63BC0005FC1F /* ProductCell.xib in Resources */,
 				80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */,
 				80A8BBA21BFAE9040005FC1F /* CategoryCell.xib in Resources */,
+				803F11501BFD9146001AD86A /* ProductDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +476,7 @@
 				80A8BB8C1BFA106D0005FC1F /* FBSignupViewController.m in Sources */,
 				80B86E451BF436C1006D3A0B /* FBSlides.m in Sources */,
 				80B86E711BF49121006D3A0B /* FBProductModel.m in Sources */,
+				803F114E1BFD9120001AD86A /* FBProductDetailViewController.m in Sources */,
 				80B86E4E1BF4392A006D3A0B /* NSString+FBMD5.m in Sources */,
 				80B86E371BF434BA006D3A0B /* FBCategoryModel.m in Sources */,
 				80A8BBBA1BFC175E0005FC1F /* FBProductListViewController.m in Sources */,

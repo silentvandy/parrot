@@ -19,6 +19,8 @@
 #import "FBCategoryModel.h"
 #import "FBProductModel.h"
 
+#import "FBProductDetailViewController.h"
+
 @interface FBProductListViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,FBRequestDelegate> {
     FBAPI *_apiRequest;
     NSMutableArray *_dataSource;
@@ -104,7 +106,6 @@ static NSString * const reuseIdentifier = @"ProductCell";
 #pragma mark - FBRequestDelegate
 
 - (void)requestSucess:(FBRequest *)request result:(id)result {
-    NSLog(@"Products: %@", result);
     if ([request.flag isEqualToString: kProductData]) {
         // 装载Model数据
         FBProductModel *md = [[FBProductModel alloc] init];
@@ -179,6 +180,14 @@ static NSString * const reuseIdentifier = @"ProductCell";
 
 #pragma mark - UICollectionViewDelegate
 
+- (void)collectionView:(UICollectionViewCell *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    FBProductModel *selectedProduct = [_dataSource objectAtIndex:indexPath.item];
+    
+    FBProductDetailViewController *productDetailViewController = [[FBProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil];
+    productDetailViewController.selectedProduct = selectedProduct;
+    
+    [self.navigationController pushViewController:productDetailViewController animated:YES];
+}
 
 
 /*

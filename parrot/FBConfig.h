@@ -65,7 +65,7 @@
 // 产品分类列表
 #define kURLCategoryList         @"/product/category"
 #define kURLProductList          @"/product/getlist"
-
+#define kURLProductView          @"/product/view"
 
 
 

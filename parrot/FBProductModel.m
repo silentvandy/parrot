@@ -20,13 +20,15 @@
         for (NSDictionary *dict in rows) {
             FBProductModel *md = [[FBProductModel alloc] init];
             
-            md.pid = [dict stringValueForKey:@"_id"];
-            md.title = [dict stringValueForKey:@"title"];
+            md.pid        = [dict stringValueForKey:@"_id"];
+            md.title      = [dict stringValueForKey:@"title"];
             // todo: 会员价格暂时无，需要补充
-            md.userPrice = [dict stringValueForKey:@"sale_price"];
-            md.salePrice = [dict stringValueForKey:@"sale_price"];
+            md.userPrice  = [dict stringValueForKey:@"sale_price"];
+            md.salePrice  = [dict stringValueForKey:@"sale_price"];
             
             md.coverImage = [dict stringValueForKey:@"cover_url"];
+            
+            md.summary    = [dict stringValueForKey:@"summary"];
             
             [newResult addObject:md];
         }
