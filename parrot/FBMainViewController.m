@@ -25,6 +25,7 @@
     
     NSInteger _currentPage;
     NSInteger _totalPage;
+    
 }
 
 @property (strong, nonatomic) FBAPI *adsRequest;
@@ -137,7 +138,7 @@
 }
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//
+//    
 //}
 
 - (void)slide:(FBSlides *)slide currentItem:(int)index {

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FBProductListViewController">
             <connections>
                 <outlet property="collectionView" destination="AjJ-9f-hCN" id="nxL-CK-mVM"/>
+                <outlet property="tabbarView" destination="sRW-Xe-GYC" id="Wy8-6M-G58"/>
                 <outlet property="view" destination="iN0-l3-epB" id="qLu-zN-egb"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-9f-hCN">
-                    <rect key="frame" x="0.0" y="0.0" width="364" height="592"/>
+                    <rect key="frame" x="0.0" y="44" width="364" height="548"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k3Q-xd-7Ze">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,22 +30,35 @@
                         <outlet property="delegate" destination="-1" id="Lta-dz-hGc"/>
                     </connections>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRW-Xe-GYC" userLabel="tabbar view">
+                    <rect key="frame" x="0.0" y="0.0" width="364" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5zx-af-S2b"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="AjJ-9f-hCN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Gh-kN-P7o"/>
-                <constraint firstItem="AjJ-9f-hCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3oh-ZK-y8N"/>
+                <constraint firstItem="AjJ-9f-hCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="3oh-ZK-y8N"/>
                 <constraint firstAttribute="bottom" secondItem="AjJ-9f-hCN" secondAttribute="bottom" constant="464" id="KX8-cY-7YO"/>
                 <constraint firstAttribute="trailing" secondItem="AjJ-9f-hCN" secondAttribute="trailing" id="Vk1-zb-gCh"/>
+                <constraint firstItem="sRW-Xe-GYC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="avM-ZC-aU9"/>
                 <constraint firstItem="AjJ-9f-hCN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cTf-mA-bsn"/>
                 <constraint firstAttribute="trailing" secondItem="AjJ-9f-hCN" secondAttribute="trailing" id="ek1-EZ-1UC"/>
                 <constraint firstAttribute="bottom" secondItem="AjJ-9f-hCN" secondAttribute="bottom" id="jjg-ye-fhD"/>
+                <constraint firstItem="sRW-Xe-GYC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oYR-Pz-n4Y"/>
+                <constraint firstAttribute="trailing" secondItem="sRW-Xe-GYC" secondAttribute="trailing" id="qXx-gk-ZCl"/>
+                <constraint firstItem="AjJ-9f-hCN" firstAttribute="top" secondItem="sRW-Xe-GYC" secondAttribute="bottom" id="svX-ik-Tu3"/>
                 <constraint firstItem="AjJ-9f-hCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xl7-41-0ey"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="3oh-ZK-y8N"/>
                     <exclude reference="KX8-cY-7YO"/>
+                    <exclude reference="xl7-41-0ey"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="179" y="389"/>

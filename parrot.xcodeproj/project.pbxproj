@@ -10,6 +10,8 @@
 		07A5F624FE5EE0F51F080066 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CE739E3CB4C3A92359F467 /* libPods.a */; };
 		803F114E1BFD9120001AD86A /* FBProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 803F114D1BFD9120001AD86A /* FBProductDetailViewController.m */; };
 		803F11501BFD9146001AD86A /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803F114F1BFD9146001AD86A /* ProductDetailViewController.xib */; };
+		803F11531BFDB6D6001AD86A /* FBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 803F11521BFDB6D6001AD86A /* FBTabBar.m */; };
+		803F11551BFDDC8B001AD86A /* TrialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803F11541BFDDC8B001AD86A /* TrialViewController.xib */; };
 		80A8BB761BF57D830005FC1F /* FBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB751BF57D830005FC1F /* FBLoginViewController.m */; };
 		80A8BB7B1BF592AB0005FC1F /* FBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB7A1BF592AB0005FC1F /* FBTextField.m */; };
 		80A8BB841BF859C80005FC1F /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A8BB831BF859C80005FC1F /* FBRequest.m */; };
@@ -62,6 +64,9 @@
 		803F114C1BFD9120001AD86A /* FBProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBProductDetailViewController.h; sourceTree = "<group>"; };
 		803F114D1BFD9120001AD86A /* FBProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBProductDetailViewController.m; sourceTree = "<group>"; };
 		803F114F1BFD9146001AD86A /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
+		803F11511BFDB6D6001AD86A /* FBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTabBar.h; sourceTree = "<group>"; };
+		803F11521BFDB6D6001AD86A /* FBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTabBar.m; sourceTree = "<group>"; };
+		803F11541BFDDC8B001AD86A /* TrialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrialViewController.xib; sourceTree = "<group>"; };
 		80A8BB741BF57D830005FC1F /* FBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginViewController.h; sourceTree = "<group>"; };
 		80A8BB751BF57D830005FC1F /* FBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginViewController.m; sourceTree = "<group>"; };
 		80A8BB791BF592AB0005FC1F /* FBTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTextField.h; sourceTree = "<group>"; };
@@ -294,6 +299,7 @@
 				80A8BBB11BFB63BC0005FC1F /* ProductCell.xib */,
 				80A8BBBB1BFC17740005FC1F /* ProductListViewController.xib */,
 				803F114F1BFD9146001AD86A /* ProductDetailViewController.xib */,
+				803F11541BFDDC8B001AD86A /* TrialViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -312,6 +318,8 @@
 				80A8BB831BF859C80005FC1F /* FBRequest.m */,
 				80A8BB851BF8C64A0005FC1F /* FBAPI.h */,
 				80A8BB861BF8C64A0005FC1F /* FBAPI.m */,
+				803F11511BFDB6D6001AD86A /* FBTabBar.h */,
+				803F11521BFDB6D6001AD86A /* FBTabBar.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -402,6 +410,7 @@
 				80A8BBA41BFAF8570005FC1F /* CategoryViewController.xib in Resources */,
 				80B86E1F1BF42E6D006D3A0B /* Assets.xcassets in Resources */,
 				80A8BBB21BFB63BC0005FC1F /* ProductCell.xib in Resources */,
+				803F11551BFDDC8B001AD86A /* TrialViewController.xib in Resources */,
 				80B86E531BF43A21006D3A0B /* MainViewController.xib in Resources */,
 				80A8BBA21BFAE9040005FC1F /* CategoryCell.xib in Resources */,
 				803F11501BFD9146001AD86A /* ProductDetailViewController.xib in Resources */,
@@ -483,6 +492,7 @@
 				80B86E651BF43BD6006D3A0B /* FBMainViewController.m in Sources */,
 				80A8BB911BFA1BF50005FC1F /* FBForgotPasswordViewController.m in Sources */,
 				80B86E5F1BF43B20006D3A0B /* FBCategoryViewController.m in Sources */,
+				803F11531BFDB6D6001AD86A /* FBTabBar.m in Sources */,
 				80A8BBA71BFB16A40005FC1F /* FBCategoryCell.m in Sources */,
 				80B86E591BF43ADD006D3A0B /* FBAccountViewController.m in Sources */,
 				80A8BBB01BFB636E0005FC1F /* FBProductCell.m in Sources */,

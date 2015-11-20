@@ -15,15 +15,18 @@
 #import "FBConfig.h"
 #import "FBRequest.h"
 
+#import "FBTabBar.h"
 #import "FBProductCell.h"
 #import "FBCategoryModel.h"
 #import "FBProductModel.h"
 
 #import "FBProductDetailViewController.h"
 
-@interface FBProductListViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,FBRequestDelegate> {
+@interface FBProductListViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,FBRequestDelegate,FBTabBarDelegate> {
     FBAPI *_apiRequest;
     NSMutableArray *_dataSource;
+    
+    FBTabBar *_tabBar;
 }
 
 @property (nonatomic, assign) int page;
@@ -36,17 +39,40 @@
 
 static NSString * const reuseIdentifier = @"ProductCell";
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // 添加分类tab
+    NSArray *allTabs = [[NSArray alloc] initWithObjects:@"智能家居", @"消费电子", @"生活美学", @"家居日用", nil];
+    _tabBar = [[FBTabBar alloc] initWithFrame:CGRectMake(0, 64.0f, SCREEN_WIDTH, 44.0f) showArrawButton:YES];
+    _tabBar.delegate   = self;
+    _tabBar.itemTitles = allTabs;
+    _tabBar.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1];
+    [_tabBar updateItemsData];
+    
+    [self.view addSubview:_tabBar];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.title = _selectedCategory.cateTitle;
     
-    self.collectionView.backgroundColor = [UIColor lightGrayColor];
+    self.collectionView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1];
     
     // 初始化
     _dataSource = [[NSMutableArray alloc] initWithCapacity:0];
     _page = 1;
+    
+    // 添加分类tab
+    NSArray *allTabs = [[NSArray alloc] initWithObjects:@"智能硬件", @"智能手环", @"生活美学", nil];
+    _tabBar = [[FBTabBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44.0f) showArrawButton:NO];
+    _tabBar.delegate   = self;
+    _tabBar.itemTitles = allTabs;
+    [_tabBar updateItemsData];
+    
+    [self.tabbarView addSubview:_tabBar];
     
     // 注册优化
     [self.collectionView registerNib:[UINib nibWithNibName:@"ProductCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];

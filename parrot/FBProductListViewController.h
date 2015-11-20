@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) FBCategoryModel *selectedCategory;
 
+@property (weak, nonatomic) IBOutlet UIView *tabbarView;
+
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
 @end
